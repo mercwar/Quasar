@@ -23,25 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     paintNebula();
 
-    // Helper to safely decode URI parameters whether they arrive encoded or unencoded
+    // Helper to decode URI parameters and strip hardcoded query strings
     function sanitizePath(path) {
         if (!path) return "";
+        let clean = path;
         try {
-            return decodeURIComponent(path);
+            clean = decodeURIComponent(path);
         } catch (e) {
-            return path;
+            clean = path;
         }
+        // Strip any existing ? query parameters
+        return clean.split("?")[0].trim();
     }
 
-    // --- Load .quasar file with cache-busting timestamp ---
+    // --- Load .quasar file with clean cache-busting timestamp ---
     const starField = document.getElementById("star-field");
     const urlParams = new URLSearchParams(window.location.search);
     const rawQuasarParam = urlParams.get("quasar");
     const quasarParam = sanitizePath(rawQuasarParam);
 
     if (quasarParam) {
-        const cacheBuster = `?t=${Date.now()}`;
-        const quasarPath = '../' + quasarParam + cacheBuster;
+        const quasarPath = '../' + quasarParam + `?t=${Date.now()}`;
 
         const hudTarget = document.getElementById("hud-target");
         if (hudTarget) {
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function parseAndRender(csvContent) {
         const cyborgFiles = [];
         csvContent.split(",").forEach(entry => {
-            const trimmed = sanitizePath(entry.trim());
+            const trimmed = sanitizePath(entry);
             if (trimmed && trimmed.toLowerCase().endsWith(".cyborg")) {
                 cyborgFiles.push(trimmed);
             }
@@ -91,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const star = document.createElement("div");
             star.className = "stargate-star";
 
-            // Fixed pixel position
             star.style.left = `${nodeAnchors[i].x}px`;
             star.style.top = `${nodeAnchors[i].y}px`;
 
@@ -101,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             star.appendChild(label);
 
-            // --- AJAX Fetch on Node Click (Hardcoded '../' matching quasar fetch) ---
             star.addEventListener("click", (e) => {
                 e.stopPropagation();
 
@@ -115,8 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelectorAll(".stargate-star").forEach(s => s.classList.remove("active-gate"));
                 star.classList.add("active-gate");
 
-                const cacheBuster = `?t=${Date.now()}`;
-                const cyborgPath = '../' + cleanFile + cacheBuster;
+                const cyborgPath = '../' + cleanFile + `?t=${Date.now()}`;
 
                 fetch(cyborgPath, { cache: "no-store" })
                     .then(res => res.ok ? res.text() : Promise.reject(res.status))
@@ -163,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (error) {
             modalBody.innerHTML = `<div class="modal-error">[AVIS ERROR]: Failed to load asset stream (${error})</div>`;
         } else {
-            const entries = rawContent.split(/[\r\n,]+/).map(item => sanitizePath(item.trim())).filter(Boolean);
+            const entries = rawContent.split(/[\r\n,]+/).map(item => sanitizePath(item)).filter(Boolean);
 
             if (entries.length === 0) {
                 modalBody.innerHTML = `<div class="modal-empty">No target payload assets listed.</div>`;
@@ -175,16 +174,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     const li = document.createElement("li");
                     const a = document.createElement("a");
                     
-                    const cacheBuster = `?t=${Date.now()}`;
+                    const cleanItem = sanitizePath(item);
                     
-                    // Route .quasar files back to the starmap view, otherwise route to raw asset
-                    if (item.toLowerCase().endsWith(".quasar")) {
-                        a.href = `index.html?quasar=${encodeURIComponent(item)}&t=${Date.now()}`;
+                    if (cleanItem.toLowerCase().endsWith(".quasar")) {
+                        a.href = `index.html?quasar=${encodeURIComponent(cleanItem)}`;
                     } else {
-                        a.href = '../' + item + cacheBuster;
+                        a.href = '../' + cleanItem + `?t=${Date.now()}`;
                     }
 
-                    a.innerText = item;
+                    a.innerText = cleanItem;
                     a.className = "cyborg-link";
                     a.setAttribute("target", "_self");
 

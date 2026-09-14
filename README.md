@@ -19,7 +19,7 @@ Each glowing star represents a metadata form. When you click a star, the form op
 👉 **[View Live Publishing Tutorial](https://mercwar.github.io/AVIS-DL/dl/2026/09/14/1-tutorial.html)**
 
 <a href="https://cron.iblogger.org/AVIS-DATALAKE">
-  <img src="avis-dl.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 
 The stargate is avaiblable at [Starget](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F9%2F14%2F9-Tutorial.quasar) Tutorial 

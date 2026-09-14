@@ -16,7 +16,7 @@ Each active gate represents a dynamic target payload node. When you engage a gat
 
 👉 *Uplink:* [AVIS Datalake - CVBGOD Stargate Terminal](https://cron.iblogger.org/AVIS-DATALAKE/stargate/index.html?quasar=stargate%2Fstargate.quasar)
 
-👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F9%2F14%2F9-Tutorial.quasar&t=000) Quasar**
+👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar&t=000) Quasar**
 <a href="https://cron.iblogger.org/AVIS-DATALAKE">
   <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>

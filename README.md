@@ -1,3 +1,29 @@
+
+<a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Constellation/index.html">
+<img 
+    src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/refs/heads/main/Version%207/image_d2a07390.png" 
+    alt="Mercwar Constellation" 
+    style="width:100%; height:auto;"
+/>
+</a>
+
+# 🌌 AVIS‑DATALAKE Star Map & Core Guide
+
+## Overview
+
+The **Star Map** is the visual navigation console of **AVIS‑DATALAKE (AVIS‑DL)**.  
+Each glowing star represents a metadata form. When you click a star, the form opens in a window, you submit a datalake record, and the record is automatically pushed into GitHub.
+
+👉 *Uplink:* THE [FREE Command Interface](https://cron.iblogger.org/AVIS-DATALAKE) for the AVIS‑DATALAKE Star Map Commander
+
+👉 **[View Live Publishing Tutorial](https://mercwar.github.io/AVIS-DL/dl/2026/09/14/1-tutorial.html)**
+
+<a href="https://cron.iblogger.org/AVIS-DATALAKE">
+  <img src="avis-dl.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
+
+The stargate is avaiblable at [Starget](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F9%2F14%2F9-Tutorial.quasar) Tutorial 
+
 ## AVIS Starmap Project
 An advanced, decentralized DHTML star system visualization engine and data indexing ecosystem running natively on GitHub Pages. The project maps structural data files onto an interactive stellar node network.
 ## Core System Architecture
@@ -33,5 +59,57 @@ Let me know if you would like to:
 
 * Embed a specific emoji set directly into the headers or section blocks
 * Add an explicit cURL setup configuration block for setting up the server gateway
+
+
+
+# ⚖️ MERCWAR LEGAL SECTION
+
+All systems, interfaces, assets, and data‑handling mechanisms within the Mercwar Network—including AVIS‑DATALAKE, the Star Map Commander, and all affiliated gateways—operate under a permanent‑record public storage model. By using any Mercwar submission interface, you agree to the following binding conditions.
+
+### DATA SUBMISSION & STORAGE
+All submitted content is written directly into the AVIS‑DL public repository.  
+Every file becomes a permanent, immutable entry in the public ledger.  
+Files cannot be edited, renamed, removed, or obscured once written.
+
+Submitting content through any Mercwar gateway constitutes full consent to:
+- permanent public storage,
+- unrestricted public visibility,
+- and irreversible archival under the AVIS‑DL system.
+
+### USER RESPONSIBILITY
+You are solely responsible for the material you submit.  
+You must ensure that your content:
+- contains no sensitive personal information,
+- contains no confidential or proprietary data,
+- and complies with all applicable laws and regulations.
+
+Mercwar assumes no liability for user‑submitted content or any consequences arising from its public availability.
+
+### SECURITY & PROHIBITED USE
+Mercwar systems automatically sanitize and validate incoming payloads.  
+You may not upload:
+- malicious code,
+- harmful payloads,
+- illegal content,
+- or any material intended to disrupt or compromise system integrity.
+
+Violations may result in permanent termination of submission access.
+
+### COPYRIGHT & OWNERSHIP
+All original Mercwar assets—including logos, UI systems, Star Map designs, AVIS‑DL architecture, and documentation—are protected under applicable copyright law.
+
+User‑submitted content remains the intellectual property of the submitting party.  
+However, by submitting content, you grant Mercwar a **perpetual, irrevocable, worldwide license** to store, display, and distribute the material as part of the AVIS‑DL public archive.
+
+### PLATFORM SCOPE
+Mercwar systems function as experimental, public‑facing technology demonstrations.  
+By using these systems, you acknowledge:
+- their experimental nature,
+- the absence of warranties,
+- and the permanent, public nature of all submissions.
+
+Continued use of the Mercwar Network signifies acceptance of all terms in this Legal Section.
+
+Copyright © 2026 MercWar AI — All Rights Reserved.
 
 

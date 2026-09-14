@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return clean.split("?")[0].trim();
     }
 
-    // --- Load .quasar.txt file with clean cache-busting timestamp ---
+    // --- Load .quasar file with clean cache-busting timestamp ---
     const starField = document.getElementById("star-field");
     const urlParams = new URLSearchParams(window.location.search);
     const rawQuasarParam = urlParams.get("quasar");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hudTarget.innerText = `Target: ${quasarParam.split("/").pop()}`;
         }
 
-        fetch(quasarPath)
+        fetch(quasarPath, { cache: "no-store" })
             .then(res => res.ok ? res.text() : Promise.reject(res.status))
             .then(csv => parseAndRender(csv))
             .catch(err => console.error("Failed to load quasar file:", err));
@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cyborgFiles = [];
         csvContent.split(",").forEach(entry => {
             const trimmed = sanitizePath(entry);
-            // Matches both .cyborg.txt and legacy .cyborg entries
-            if (trimmed && (trimmed.toLowerCase().endsWith(".cyborg.txt") || trimmed.toLowerCase().endsWith(".cyborg"))) {
+            if (trimmed && trimmed.toLowerCase().endsWith(".cyborg")) {
                 cyborgFiles.push(trimmed);
             }
         });
@@ -118,11 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const cyborgPath = '../' + cleanFile + `?t=${Date.now()}`;
 
-                fetch(cyborgPath)
+                fetch(cyborgPath, { cache: "no-store" })
                     .then(res => res.ok ? res.text() : Promise.reject(res.status))
                     .then(content => renderCyborgModal(cleanFile, content))
                     .catch(err => {
-                        console.error("Failed to load cyborg file:", err);
+                        console.error("Failed to load .cyborg file:", err);
                         renderCyborgModal(cleanFile, null, err);
                     });
             });
@@ -177,8 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     const cleanItem = sanitizePath(item);
                     
-                    // Direct .quasar.txt files back to the starmap view
-                    if (cleanItem.toLowerCase().endsWith(".quasar.txt") || cleanItem.toLowerCase().endsWith(".quasar")) {
+                    if (cleanItem.toLowerCase().endsWith(".quasar")) {
                         a.href = `index.html?quasar=${encodeURIComponent(cleanItem)}`;
                     } else {
                         a.href = '../' + cleanItem + `?t=${Date.now()}`;

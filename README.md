@@ -7,17 +7,16 @@
 />
 </a>
 
-# 🌌 AVIS‑DATALAKE Star Map & Core Guide
+# 🌌 Quasar Stargate & Core Guide
 
 ## Overview
 
-The **Star Map** is the visual navigation console of **AVIS‑DATALAKE (AVIS‑DL)**.  
-Each glowing star represents a metadata form. When you click a star, the form opens in a window, you submit a datalake record, and the record is automatically pushed into GitHub.
+The **Quasar Stargate** is the visual navigation console of **AVIS‑DATALAKE (AVIS‑DL)**.  
+Each active gate represents a dynamic target payload node. When you engage a gate, its `.cyborg` manifest or `.quasar` star-map stream is decoded, opening an interactive manifest modal to route payload records directly through GitHub.
 
-👉 *Uplink:* THE [FREE Command Interface](https://cron.iblogger.org/AVIS-DATALAKE) for the AVIS‑DATALAKE Star Map Commander
+👉 *Uplink:* [AVIS Datalake - CVBGOD Stargate Terminal](https://cron.iblogger.org/AVIS-DATALAKE/stargate/index.html?quasar=stargate%2Fstargate.quasar)
 
-👉 **[View Live Publishing Tutorial](https://mercwar.github.io/AVIS-DL/dl/2026/09/14/1-tutorial.html)**
-
+👉 ** This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F9%2F14%2F9-Tutorial.quasar&t=1789413865694) Quasar**
 <a href="https://cron.iblogger.org/AVIS-DATALAKE">
   <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>

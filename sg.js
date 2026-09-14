@@ -23,10 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     paintNebula();
 
+    // Helper to safely decode URI parameters whether they arrive encoded or unencoded
+    function sanitizePath(path) {
+        if (!path) return "";
+        try {
+            return decodeURIComponent(path);
+        } catch (e) {
+            return path;
+        }
+    }
+
     // --- Load .quasar file with cache-busting timestamp ---
     const starField = document.getElementById("star-field");
     const urlParams = new URLSearchParams(window.location.search);
-    const quasarParam = urlParams.get("quasar");
+    const rawQuasarParam = urlParams.get("quasar");
+    const quasarParam = sanitizePath(rawQuasarParam);
 
     if (quasarParam) {
         const cacheBuster = `?t=${Date.now()}`;
@@ -46,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function parseAndRender(csvContent) {
         const cyborgFiles = [];
         csvContent.split(",").forEach(entry => {
-            const trimmed = entry.trim();
+            const trimmed = sanitizePath(entry.trim());
             if (trimmed && trimmed.toLowerCase().endsWith(".cyborg")) {
                 cyborgFiles.push(trimmed);
             }
@@ -67,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Fixed 900x600 pixel anchors ordered by focal priority
         const nodeAnchors = [
             { x: 203, y: 119 }, // Orange Top Left
-            { x: 97, y: 264 }, // Orange Mid Left
+            { x: 97, y: 264 },  // Orange Mid Left
             { x: 252, y: 387 }, // Orange Bottom Left
             { x: 777, y: 108 }, // Blue Top Right
             { x: 805, y: 307 }, // Blue Mid Right
@@ -94,23 +105,25 @@ document.addEventListener("DOMContentLoaded", () => {
             star.addEventListener("click", (e) => {
                 e.stopPropagation();
 
+                const cleanFile = sanitizePath(file);
+
                 const hudTarget = document.getElementById("hud-target");
                 if (hudTarget) {
-                    hudTarget.innerText = `Engaged: ${file}`;
+                    hudTarget.innerText = `Engaged: ${cleanFile}`;
                 }
 
                 document.querySelectorAll(".stargate-star").forEach(s => s.classList.remove("active-gate"));
                 star.classList.add("active-gate");
 
                 const cacheBuster = `?t=${Date.now()}`;
-                const cyborgPath = '../' + file + cacheBuster;
+                const cyborgPath = '../' + cleanFile + cacheBuster;
 
                 fetch(cyborgPath, { cache: "no-store" })
                     .then(res => res.ok ? res.text() : Promise.reject(res.status))
-                    .then(content => renderCyborgModal(file, content))
+                    .then(content => renderCyborgModal(cleanFile, content))
                     .catch(err => {
                         console.error("Failed to load .cyborg file:", err);
-                        renderCyborgModal(file, null, err);
+                        renderCyborgModal(cleanFile, null, err);
                     });
             });
 
@@ -118,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-// --- Dynamic Popup Modal Rendering ---
+    // --- Dynamic Popup Modal Rendering ---
     function renderCyborgModal(filename, rawContent, error = null) {
         let modal = document.getElementById("cyborg-modal");
 
@@ -150,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (error) {
             modalBody.innerHTML = `<div class="modal-error">[AVIS ERROR]: Failed to load asset stream (${error})</div>`;
         } else {
-            const entries = rawContent.split(/[\r\n,]+/).map(item => item.trim()).filter(Boolean);
+            const entries = rawContent.split(/[\r\n,]+/).map(item => sanitizePath(item.trim())).filter(Boolean);
 
             if (entries.length === 0) {
                 modalBody.innerHTML = `<div class="modal-empty">No target payload assets listed.</div>`;

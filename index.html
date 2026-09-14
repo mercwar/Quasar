@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVIS Datalake - CVBGOD Stargate Terminal</title>
+  <link rel="stylesheet" href="sg.css?v=3" />
+</head>
+<body>
+
+<div id="viewport">
+  <!-- Dedicated Stargate Background Layer -->
+  <div id="map-background"></div>
+
+  <!-- Transparent Dust Overlay Canvas -->
+  <canvas id="nebula-canvas" width="900" height="600"></canvas>
+
+  <!-- Compact AVIS HUD Log Panel -->
+  <div id="hud-panel">
+    <h1>AVIS Stargate Network [CVBGOD Core]</h1>
+    <div id="hud-target" class="hud-stat">Target: Query Pending</div>
+    <div id="hud-count" class="hud-stat">Active Gates: 0</div>
+  </div>
+
+  <!-- Interactive Star Nodes Field -->
+  <div id="star-field"></div>
+</div>
+
+<script src="sg.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+/* Base Page Setup with Native Scrollbars */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #010206;
+  color: #c9d1d9;
+  font-family: 'Courier New', Courier, monospace;
+  
+  /* Enables scrolling when browser window is smaller than 900x600 */
+  overflow: auto;
+  
+  /* Flexbox centers the map when screen space permits */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('sg-rpt.png');
+  background-repeat: repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-color: #000; /* Fallback before texture loads */
+}
+
+/* Fixed 900x600 Viewport (Never Shrinks) */
+#viewport {
+  position: relative;
+  
+  /* Strict explicit dimensions */
+  width: 900px;
+  height: 600px;
+  min-width: 900px;
+  min-height: 600px;
+  max-width: 900px;
+  max-height: 600px;
+  
+  /* Prevents container collapse inside flex layout */
+  flex-shrink: 0;
+  
+  /* STRIPPED: Hard map borders and layout margins removed */
+  border: none;
+  margin: 0;
+  padding: 0;
+  
+  /* ADDED: Clean transparency fade mask layer and ambient overlay shadows */
+  background: transparent;
+  overflow: hidden;
+  box-shadow: inset 0 0 80px rgba(1, 2, 6, 0.95), 0 0 45px rgba(2, 132, 199, 0.25);
+  backdrop-filter: blur(1px);
+}
+
+/* Dedicated Background Image Layer (Locks to 900x600) */
+#map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  z-index: 0;
+  background: url("sg-dl.png") center center / contain no-repeat;
+  pointer-events: none;
+}
+
+/* Canvas Overlay */
+#nebula-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  z-index: 1;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Compact AVIS HUD Log Panel */
+#hud-panel {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  width: 240px;
+  background: rgba(3, 7, 18, 0.88);
+  border: 1px solid #0284c7;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.25);
+  pointer-events: none;
+}
+
+#hud-panel h1 {
+  margin: 0 0 4px 0;
+  font-size: 11px;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.hud-stat {
+  font-size: 10px;
+  color: #94a3b8;
+  line-height: 1.3;
+}
+
+/* Star Node Field */
+#star-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  z-index: 2;
+}
+
+/* Stargate Star Node Styling */
+.stargate-star {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;
+  background: radial-gradient(circle, #ffffff 15%, #0284c7 60%, rgba(2, 132, 199, 0.2) 100%);
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px #0284c7;
+  transform: translate(-50%, -50%);
+  animation: stargate-pulse 3s infinite alternate ease-in-out;
+  cursor: pointer;
+}
+
+.stargate-star::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  border: 1px dashed #7dd3fc;
+  animation: ring-spin 8s linear infinite;
+}
+
+.star-label {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: #38bdf8;
+  background: rgba(3, 7, 18, 0.95);
+  padding: 2px 6px;
+  border: 1px solid #0284c7;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+/* Active Gate Selection Effect */
+.stargate-star.active-gate {
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px #f59e0b, 0 0 40px #fbbf24;
+}
+
+.stargate-star.active-gate .star-label {
+  color: #fbbf24;
+  border-color: #f59e0b;
+}
+
+/* Cyborg File Popup Modal Overlay */
+#cyborg-modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  background: rgba(1, 2, 6, 0.88);
+  backdrop-filter: blur(4px);
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 650px;
+  max-height: 420px;
+  background: #030712;
+  border: 1px solid #0284c7;
+  border-radius: 6px;
+  box-shadow: 0 0 25px rgba(2, 132, 199, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: rgba(2, 132, 199, 0.15);
+  border-bottom: 1px solid #0284c7;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal-title {
+  font-size: 11px;
+  color: #38bdf8;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#modal-close {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+#modal-close:hover {
+  color: #f59e0b;
+}
+
+#modal-body {
+  padding: 16px;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+/* File List & Link Styling */
+.cyborg-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cyborg-file-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.cyborg-link {
+  display: block;
+  color: #38bdf8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-decoration: none;
+  background: rgba(2, 132, 199, 0.08);
+  padding: 8px 12px;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  word-break: break-all;
+}
+
+.cyborg-link:hover {
+  color: #ffffff;
+  background: rgba(2, 132, 199, 0.25);
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+  transform: translateX(4px);
+}
+
+.modal-error {
+  color: #ef4444;
+  font-size: 11px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 8px;
+}
+
+.modal-empty {
+  color: #64748b;
+  font-size: 11px;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  padding: 8px;
+}
+
+/* Animations */
+@keyframes stargate-pulse {
+  0% { box-shadow: 0 0 6px #38bdf8, 0 0 12px #0284c7; }
+  100% { box-shadow: 0 0 14px #38bdf8, 0 0 28px #0284c7, 0 0 40px #0369a1; }
+}
+
+@keyframes ring-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Dedicated Background Image Layer (Locks to 900x600) */
+#map-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 600px;
+  z-index: 0;
+  /* CHANGED: Set to cover so the target nebulae artwork locks edge-to-edge inside the viewport area */
+  background: url("sg-dl.png") center center / cover no-repeat;
+  pointer-events: none;
+}

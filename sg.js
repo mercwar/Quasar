@@ -103,12 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const ringC = document.createElement("div");
             ringC.className = "orbit-ring-c";
 
-            const electron = document.createElement("div");
-            electron.className = "electron";
-
             star.appendChild(ringB);
             star.appendChild(ringC);
-            star.appendChild(electron);
 
             const label = document.createElement("div");
             label.className = "star-label";

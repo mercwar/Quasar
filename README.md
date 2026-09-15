@@ -11,8 +11,21 @@
 
 ## Overview
 
-The **Quasar Stargate** is the visual navigation console of **AVIS‑DATALAKE (AVIS‑DL)**.  
-Each active gate represents a dynamic target payload node. When you engage a gate, its `.cyborg` manifest or `.quasar` star-map stream is decoded, opening an interactive manifest modal to route payload records directly through GitHub.
+The Quasar Stargate is the visual navigation console for AVIS‑DATALAKE (AVIS‑DL). Each active gate represents a dynamic target payload node. Engaging a gate decodes its  manifest or  star-map stream, opening an interactive modal to route payload records directly through GitHub. 
+Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages. 
+Deploying Your Own Stargate 
+While you can continue using the default AVIS-DL ecosystem, you can also clone the repository to host Quasar on your own PHP/CGI server or GitHub Pages. The repository contains a fully functional  and JavaScript file ready for deployment. 
+To set up your personal NEXUS Gateway: 
+
+1. Clone the repository to your own GitHub account. 
+2. Update the Nexus configurations by replacing the default  repository path with your own DataLake details. 
+3. Uplink your JSON application to AVIS-DATALAKE to point end-users toward your cloned repository using the following URL structure: 
+
+Once configured, you can use the NEXUS Gateway to navigate. Note that to manage your own standalone DataLake records, you will need to save them to your own private host or server-side application. 
+To create your own Stargate, it is only necessary to... 
+To help you finish the final thought, could you clarify what the absolute minimum requirement is to create a Stargate (e.g., fork the repo, configure a single JSON file, or have a GitHub account)? 
+
+
 
 👉 *Uplink:* [AVIS-DATALAKE - Stargate interface](https://cron.iblogger.org/AVIS-DATALAKE)  
 👉 *Uplink:* [NEXUS - Stargate interface](https://cron.iblogger.org/NEXUS)
@@ -72,15 +85,8 @@ https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/file
 * Architecture: PHP 8.5+ Server Backend / GitHub Pages Front-End
 * Primary Engines: DHTML Star System Visualization Engine, cURL Sequence Ingress Gateway
 * Extension Layers: .quasar (Stargate Manifest Registry), .cyborg (Data Node Coordinate File)
-* Repository Path Layout: /dl/<year>/<month>/<day>/*json
-* Developer Context: Developed by mercwar (Joetron) for the META system identity pipeline.
-
-Let me know if you would like to:
-
-* Embed a specific emoji set directly into the headers or section blocks
-* Add an explicit cURL setup configuration block for setting up the server gateway
-
-
+* Repository Path Layout: github addresses for github pages do follow syntax '../'
+* Linking to '../' from thw AVIS-DL folder would be the same thing as 'CD github.com/mercwar' from outside of the internet 
 
 # ⚖️ MERCWAR LEGAL SECTION
 

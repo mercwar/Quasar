@@ -42,8 +42,10 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway Ingress URL Protocol
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
-https://github.io
-
+```
+Quasar protocol:
+https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/filenum-title.*avis-datalake home extenstions*>
+```
 ![q](ss1.png)
 
 ------------------------------

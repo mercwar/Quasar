@@ -14,7 +14,8 @@
 The **Quasar Stargate** is the visual navigation console of **AVIS‑DATALAKE (AVIS‑DL)**.  
 Each active gate represents a dynamic target payload node. When you engage a gate, its `.cyborg` manifest or `.quasar` star-map stream is decoded, opening an interactive manifest modal to route payload records directly through GitHub.
 
-👉 *Uplink:* [AVIS Datalake - CVBGOD Stargate Terminal](https://cron.iblogger.org/AVIS-DATALAKE/stargate/index.html?quasar=stargate%2Fstargate.quasar)
+👉 *Uplink:* [AVIS-DATALAKE - Stargate interface](https://cron.iblogger.org/AVIS-DATALAKE)  
+👉 *Uplink:* [NEXUS - Stargate interface](https://cron.iblogger.org/NEXUS/index.html)
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar&t=000) Quasar**
 <a href="https://cron.iblogger.org/AVIS-DATALAKE">

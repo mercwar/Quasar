@@ -23,7 +23,7 @@ Each active gate represents a dynamic target payload node. When you engage a gat
   <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 
-The stargate is avaiblable at Tutorial [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar)
+The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
 
 ## AVIS Starmap Project
 An advanced, decentralized DHTML star system visualization engine and data indexing ecosystem running natively on GitHub Pages. The project maps structural data files onto an interactive stellar node network.

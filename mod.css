@@ -1,0 +1,123 @@
+/* ==========================================================================
+   🔮 AVIS DATALAKE FIREGEM THEME - Black Glass Modal (Gold + Orange Highlights)
+   ========================================================================== */
+
+#cyborg-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75); /* black glass backdrop */
+  backdrop-filter: blur(14px);
+  z-index: 9999;
+}
+
+#cyborg-modal .modal-content {
+  background: rgba(15, 15, 20, 0.9); /* black glass core */
+  border: 1px solid rgba(255, 215, 0, 0.25); /* gold accent border */
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
+              0 0 40px rgba(255, 215, 0, 0.5);
+  width: 640px;
+  max-width: 90%;
+  color: #ffffff; /* white font */
+  font-family: 'Segoe UI', 'Consolas', monospace;
+  overflow: hidden;
+  animation: firegem-fadein 0.4s ease-out;
+  background-image: url('images/sg-rpt.png'); /* 🔮 background image */
+  background-size: cover;
+  background-position: center;
+}
+
+#cyborg-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85); /* black glass bar */
+  padding: 12px 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff; /* white font */
+  text-shadow: 0 0 6px #ff8c00; /* orange glow */
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+#cyborg-modal #modal-title {
+  font-size: 1rem;
+  color: #ffd700; /* gold title */
+}
+
+#cyborg-modal #modal-close {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+#cyborg-modal #modal-close:hover {
+  color: #ff8c00; /* orange highlight */
+  transform: scale(1.2);
+}
+
+#cyborg-modal #modal-body {
+  padding: 18px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* --- File List as Gold/Orange Buttons with Left Indicators --- */
+.cyborg-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.cyborg-file-list li {
+  margin: 0;
+}
+.cyborg-file-list a.cyborg-link {
+  display: inline-block;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ffd700; /* gold border */
+  border-left: 6px solid #ff8c00; /* 🔥 left-side indicator */
+  border-radius: 6px;
+  color: #ffffff; /* white font */
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+  text-align: left;
+  position: relative;
+  box-shadow: -6px 0 12px rgba(255, 140, 0, 0.6); /* orange glow */
+}
+.cyborg-file-list a.cyborg-link:hover {
+  background: rgba(255, 140, 0, 0.25);
+  border-color: #ff8c00;
+  border-left-color: #ffd700; /* gold highlight */
+  color: #ffd700; /* gold text */
+  box-shadow: -6px 0 16px rgba(255, 140, 0, 0.9);
+  transform: translateX(4px);
+}
+.cyborg-file-list a.cyborg-link:active {
+  transform: scale(0.96);
+  border-left-color: #ffffff; /* flash white on click */
+  box-shadow: -6px 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* --- Animations --- */
+@keyframes firegem-fadein {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes firegem-border-glow {
+  0%   { border-left-color: #ff8c00; }
+  50%  { border-left-color: #ffd700; }
+  100% { border-left-color: #ff8c00; }
+}
+.cyborg-file-list a.cyborg-link.glow {
+  animation: firegem-border-glow 2s infinite ease-in-out;
+}

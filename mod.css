@@ -167,3 +167,59 @@
   border-left-color: #ffffff; /* flash white on click */
   box-shadow: -6px 0 20px rgba(255, 255, 255, 0.8);
 }
+/* ==========================================================================
+   🔮 AVIS DATALAKE FIREGEM THEME - Modal Height Fix (Viewport Units)
+   ========================================================================== */
+
+#cyborg-modal .modal-content {
+  width: 800px;          /* wider modal */
+  max-width: 95%;        /* allow more horizontal space */
+  max-height: 80vh;      /* 🔧 modal height relative to viewport */
+  overflow-y: auto;      /* scroll only if truly needed */
+  background: rgba(15, 15, 20, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
+              0 0 40px rgba(255, 215, 0, 0.5);
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Consolas', monospace;
+  animation: firegem-fadein 0.4s ease-out;
+  background-image: url('sg-rpt.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#cyborg-modal #modal-body {
+  padding: 20px;
+  max-height: 70vh;      /* body height relative to viewport */
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+/* ==========================================================================
+   🔮 AVIS DATALAKE FIREGEM THEME - Modal Height Fix
+   ========================================================================== */
+
+#cyborg-modal .modal-content {
+  width: 800px;          /* wider modal */
+  max-width: 95%;        /* allow more horizontal space */
+  max-height: 500px;     /* 🔧 increased max height */
+  overflow-y: auto;      /* scroll only if truly needed */
+  background: rgba(15, 15, 20, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
+              0 0 40px rgba(255, 215, 0, 0.5);
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Consolas', monospace;
+  animation: firegem-fadein 0.4s ease-out;
+  background-image: url('sg-rpt.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#cyborg-modal #modal-body {
+  padding: 20px;
+  max-height: 450px;     /* body adjusted to fit inside modal */
+  overflow-y: auto;
+  box-sizing: border-box;
+}

@@ -19,13 +19,14 @@
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
               0 0 40px rgba(255, 215, 0, 0.5);
-  width: 640px;
-  max-width: 90%;
-  color: #ffffff; /* white font */
+  width: 800px;          /* wider modal */
+  max-width: 95%;        /* allow more horizontal space */
+  max-height: 90vh;      /* taller modal relative to viewport */
+  color: #ffffff;        /* white font */
   font-family: 'Segoe UI', 'Consolas', monospace;
-  overflow: hidden;
+  overflow-y: auto;      /* scroll only if truly needed */
   animation: firegem-fadein 0.4s ease-out;
-  background-image: url('images/sg-rpt.png'); /* 🔮 background image */
+  background-image: url('sg-rpt.png'); /* 🔮 background image */
   background-size: cover;
   background-position: center;
 }
@@ -43,9 +44,14 @@
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-#cyborg-modal #modal-title {
-  font-size: 1rem;
-  color: #ffd700; /* gold title */
+#cyborg-modal #modal-title,
+.modalTitle {
+  font-size: 20px;              /* readable size */
+  font-weight: bold;
+  color: #ffd700;               /* gold title text */
+  text-shadow: 0 0 6px #ff8c00; /* orange glow */
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', 'Consolas', monospace;
 }
 
 #cyborg-modal #modal-close {
@@ -62,12 +68,12 @@
 }
 
 #cyborg-modal #modal-body {
-  padding: 18px;
-  max-height: 400px;
+  padding: 20px;
+  max-height: 70vh;      /* give body more breathing room */
   overflow-y: auto;
 }
 
-/* --- File List as Gold/Orange Buttons with Left Indicators --- */
+/* --- File List as Gold/Orange Full-Width Buttons with Left Indicators --- */
 .cyborg-file-list {
   list-style: none;
   padding: 0;
@@ -79,13 +85,15 @@
   margin: 0;
 }
 .cyborg-file-list a.cyborg-link {
-  display: inline-block;
-  padding: 10px 16px;
+  display: block;              /* full block element */
+  width: calc(100% - 12px);    /* add right margin to prevent overflow */
+  margin-right: 12px;          /* spacing to eliminate scrollbar */
+  padding: 12px 18px;
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #ffd700; /* gold border */
+  border: 1px solid #ffd700;   /* gold border */
   border-left: 6px solid #ff8c00; /* 🔥 left-side indicator */
   border-radius: 6px;
-  color: #ffffff; /* white font */
+  color: #ffffff;              /* white font */
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -98,7 +106,7 @@
   background: rgba(255, 140, 0, 0.25);
   border-color: #ff8c00;
   border-left-color: #ffd700; /* gold highlight */
-  color: #ffd700; /* gold text */
+  color: #ffd700;             /* gold text */
   box-shadow: -6px 0 16px rgba(255, 140, 0, 0.9);
   transform: translateX(4px);
 }
@@ -120,4 +128,42 @@
 }
 .cyborg-file-list a.cyborg-link.glow {
   animation: firegem-border-glow 2s infinite ease-in-out;
+}
+/* ==========================================================================
+   🔮 AVIS DATALAKE FIREGEM THEME - Scrollbar Fix
+   ========================================================================== */
+
+.cyborg-file-list a.cyborg-link {
+  display: block;              
+  width: 100%;                 /* occupy full width */
+  box-sizing: border-box;      /* include padding/border in width calc */
+  padding: 12px 18px;
+  margin-right: 0;             /* eliminate overflow on right side */
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ffd700;   /* gold border */
+  border-left: 6px solid #ff8c00; /* 🔥 left-side indicator */
+  border-radius: 6px;
+  color: #ffffff;              /* white font */
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+  text-align: left;
+  position: relative;
+  box-shadow: -6px 0 12px rgba(255, 140, 0, 0.6); /* orange glow */
+}
+
+.cyborg-file-list a.cyborg-link:hover {
+  background: rgba(255, 140, 0, 0.25);
+  border-color: #ff8c00;
+  border-left-color: #ffd700; /* gold highlight */
+  color: #ffd700;             /* gold text */
+  box-shadow: -6px 0 16px rgba(255, 140, 0, 0.9);
+  transform: translateX(4px);
+}
+
+.cyborg-file-list a.cyborg-link:active {
+  transform: scale(0.96);
+  border-left-color: #ffffff; /* flash white on click */
+  box-shadow: -6px 0 20px rgba(255, 255, 255, 0.8);
 }

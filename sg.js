@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const modalTitle = document.getElementById("modal-title");
         const modalBody = document.getElementById("modal-body");
 
-        modalTitle.innerText = `CYBORG MANIFEST // ${filename}`;
+        modalTitle.innerText = `${filename}`;
         modalBody.innerHTML = "";
 
         if (error) {

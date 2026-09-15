@@ -369,3 +369,8 @@ html::-webkit-scrollbar-corner,
 body::-webkit-scrollbar-corner {
     background: #010206 !important;
 }
+
+
+.modalTitle{
+	font-size:2px;
+}

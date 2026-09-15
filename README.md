@@ -47,7 +47,11 @@ Launch localized system maps directly by supplying a target manifest coordinate 
 Quasar protocol:
 https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/filenum-title.*avis-datalake home extenstions*>
 ```
-![q](ss1.png)
+
+<a href="https://cron.iblogger.org/NEXUS">
+  <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
+
 
 ------------------------------
 ## GitHub Search Context Metadata

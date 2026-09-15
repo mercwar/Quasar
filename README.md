@@ -43,10 +43,21 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway Ingress URL Protocol
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
+*Quasar protocol:*
 ```
-Quasar protocol:
 https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/filenum-title.*avis-datalake home extenstions*>
 ```
+*Instrucitons:*
+
+- Click the image below and goto [NEXUS](https://cron.iblogger.org/NEXUS)
+- Click 'Load Repository for  'mercwar/AVIS-DL' and '/dl' loaded into the boxes
+- Navigate to dl/2026/09/14/11-Tutorial.html
+- Select view with 'HTML Preview'
+- Scroll to the bottom of the JSON after the page loads, in the window you will see a scroll bar on a small screen
+- Look for a blue button  'ENGAGE STARGATE GATEWAY →' click it!
+- You will see the tutorial Quasar load
+- GOOD LUCK!
+- ###### "<i>I am CVBGOD, and I have given it to you</i>!"
 
 <a href="https://cron.iblogger.org/NEXUS">
   <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">

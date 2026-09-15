@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const sy = Math.random() * 600;
             const sSize = Math.random() * 1.5;
             const alpha = Math.random() * 0.8 + 0.2;
-            ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
             ctx.beginPath(); 
             ctx.arc(sx, sy, sSize, 0, Math.PI * 2); 
             ctx.fill();
@@ -95,6 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             star.style.left = `${nodeAnchors[i].x}px`;
             star.style.top = `${nodeAnchors[i].y}px`;
+
+            // Append subatomic orbital structures matching sg.css animation targets
+            const ringB = document.createElement("div");
+            ringB.className = "orbit-ring-b";
+
+            const ringC = document.createElement("div");
+            ringC.className = "orbit-ring-c";
+
+            const electron = document.createElement("div");
+            electron.className = "electron";
+
+            star.appendChild(ringB);
+            star.appendChild(ringC);
+            star.appendChild(electron);
 
             const label = document.createElement("div");
             label.className = "star-label";

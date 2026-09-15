@@ -3,30 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quasar Stargate</title>
-  <link rel="stylesheet" href="sg.css?v=14" />
-   <link rel="stylesheet" href="mod.css?v=14" />
+  <title>AVIS Stargate Network [CVBGOD Core]</title>
+  <link rel="stylesheet" href="sg.css?v=15" />
+  <link rel="stylesheet" href="mod.css?v=15" />
 </head>
 <body>
 
-<div id="viewport">
-  <!-- Dedicated Stargate Background Layer -->
-  <div id="map-background"></div>
+  <!-- Main Fixed 900x600 Viewport Canvas -->
+  <div id="viewport">
+    <!-- Dedicated Stargate Background Layer -->
+    <div id="map-background"></div>
 
-  <!-- Transparent Dust Overlay Canvas -->
-  <canvas id="nebula-canvas" width="900" height="600"></canvas>
+    <!-- Multi-Ring Stargate Portal Overlay Layers -->
+    <div id="stargate-ring-outer"></div>
+    <div id="stargate-ring-inner"></div>
+    <div id="stargate-ring-overlay"></div>
+    <div id="stargate-vortex"></div>
 
-  <!-- Compact AVIS HUD Log Panel -->
-  <div id="hud-panel">
-    <h1>AVIS Stargate Network [CVBGOD Core]</h1>
-    <div id="hud-target" class="hud-stat">Target: Query Pending</div>
-    <div id="hud-count" class="hud-stat">Active Gates: 0</div>
+    <!-- Transparent Nebula Dust Overlay Canvas -->
+    <canvas id="nebula-canvas" width="900" height="600"></canvas>
+
+    <!-- Compact AVIS HUD Telemetry Log Panel -->
+    <div id="hud-panel">
+      <h1>AVIS Stargate Network [CVBGOD Core]</h1>
+      <div id="hud-target" class="hud-stat">Target: Query Pending</div>
+      <div id="hud-count" class="hud-stat">Active Gates: 0</div>
+    </div>
+
+    <!-- Interactive Star Nodes Field (Supports Multi-Ring Atomic Nodes) -->
+    <div id="star-field">
+      <!-- Fallback / Initial Multi-Ring Node Structure Example -->
+      <!-- Dynamic nodes will be populated by sg.js -->
+    </div>
   </div>
 
-  <!-- Interactive Star Nodes Field -->
-  <div id="star-field"></div>
-</div>
-
-<script src="sg.js?v=14"></script>
+  <!-- Primary Stargate Network Controller -->
+  <script src="sg.js?v=15"></script>
 </body>
 </html>

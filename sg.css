@@ -1,376 +1,429 @@
-/* ==========================================================================
-   AVIS INTERFACE ARCHITECTURE: QUASAR STARGATE FRAME-FIXED LAYOUT (sg.css)
-   ========================================================================== */
-
-/* Base Page Setup - Reconfigured for Perfect Two-Axis IFrame Scroll Capture */
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #010206;
-  color: #c9d1d9;
-  font-family: 'Courier New', Courier, monospace;
-  
-  /* FIX: Forces operational vertical and horizontal browser bars inside frames */
-  overflow: auto !important; 
-  -webkit-overflow-scrolling: touch;
-  
-  /* FIX: Forces top-left initialization when viewport bounds are violated. 
-     This prevents the 900px canvas from clipping on the left during deep narrowing. */
-  display: flex !important;
-  justify-content: flex-start !important; 
-  align-items: flex-start !important;
-  
-  background-image: url('sg-rpt.png');
-  background-repeat: repeat;
-  background-position: center top;
-  background-attachment: fixed;
-  background-color: #000;
+/* ==========================================================================AVIS INTERFACE ARCHITECTURE: QUASAR STARGATE FRAME-FIXED LAYOUT (sg.css)========================================================================== */
+/* STREAMING_CHUNK:Configuring base environment styles... // Base Page Setup - Reconfigured for Perfect Two-Axis IFrame Scroll Capture */
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #010206;
+	color: #c9d1d9;
+	font-family: 'Courier New', Courier, monospace;
+	/* FIX: Forces operational vertical and horizontal browser bars inside frames */
+	overflow: auto !important;
+	-webkit-overflow-scrolling: touch;
+	/* FIX: Forces top-left initialization when viewport bounds are violated */
+	display: flex !important;
+	justify-content: flex-start !important;
+	align-items: flex-start !important;
+	background-image: url('sg-rpt.png');
+	background-repeat: repeat;
+	background-position: center top;
+	background-attachment: fixed;
 }
-
-/* Fixed 900x600 Viewport (Maintains dimensions without folding inside a frame) */
+/* STREAMING_CHUNK:Styling viewport layout and HUD log panel... // Fixed 900x600 Viewport Container */
 #viewport {
-  position: relative;
-  
-  /* Explicit layout containment dimensions */
-  width: 900px;
-  height: 600px;
-  min-width: 900px;
-  min-height: 600px;
-  max-width: 900px;
-  max-height: 600px;
-  
-  /* FIX: Blocks inner compression artifacts inside fluid layouts/iframes */
-  flex-shrink: 0 !important;
-  
-  /* FIX: Centers dynamically *only* when window canvas space permits */
-  margin: auto !important; 
-  padding: 0;
-  
-  background: transparent;
-  overflow: hidden; /* Locks inner canvas vectors securely from bleeding */
-  box-shadow: inset 0 0 80px rgba(1, 2, 6, 0.95), 0 0 45px rgba(2, 132, 199, 0.25);
-  backdrop-filter: blur(1px);
+	position: relative;
+	/* Explicit layout containment dimensions */
+	width: 900px;
+	height: 600px;
+	min-width: 900px;
+	min-height: 600px;
+	max-width: 900px;
+	max-height: 600px;
+	/* FIX: Blocks inner compression artifacts inside fluid layouts/iframes */
+	flex-shrink: 0 !important;
+	/* FIX: Centers dynamically only when window canvas space permits */
+	margin: auto !important;
+	padding: 0;
+	background: transparent;
+	overflow: hidden;
+	/* Locks inner canvas vectors securely from bleeding */
+	box-shadow: inset 0 0 80px rgba(1, 2, 6, 0.95), 0 0 45px rgba(2, 132, 199, 0.25);
+	backdrop-filter: blur(1px);
 }
-
 /* Dedicated Background Image Layer */
 #map-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 900px;
-  height: 600px;
-  z-index: 0;
-  background: url("sg-dl.png") center center / cover no-repeat;
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 900px;
+	height: 600px;
+	z-index: 0;
+	background: url("sg-dl.png") center center / cover no-repeat;
+	pointer-events: none;
 }
-
 /* Canvas Overlay */
 #nebula-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 900px;
-  height: 600px;
-  z-index: 1;
-  background: transparent;
-  pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 900px;
+	height: 600px;
+	z-index: 1;
+	background: transparent;
+	pointer-events: none;
 }
-
 /* Compact AVIS HUD Log Panel */
 #hud-panel {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 100;
-  width: 240px;
-  background: rgba(3, 7, 18, 0.88);
-  border: 1px solid #0284c7;
-  padding: 8px 12px;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(2, 132, 199, 0.25);
-  pointer-events: none;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	z-index: 100;
+	width: 240px;
+	background: rgba(3, 7, 18, 0.88);
+	border: 1px solid #0284c7;
+	padding: 8px 12px;
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(2, 132, 199, 0.25);
+	pointer-events: none;
 }
-
 #hud-panel h1 {
-  margin: 0 0 4px 0;
-  font-size: 11px;
-  color: #38bdf8;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
+	margin: 0 0 4px 0;
+	font-size: 11px;
+	color: #38bdf8;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
 }
-
 .hud-stat {
-  font-size: 10px;
-  color: #94a3b8;
-  line-height: 1.3;
+	font-size: 10px;
+	color: #94a3b8;
+	line-height: 1.3;
 }
-
-/* Star Node Field */
+/* Star Node Field Container */
 #star-field {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 900px;
-  height: 600px;
-  z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 900px;
+	height: 600px;
+	z-index: 2;
 }
-
-/* Stargate Star Node Styling */
+/* STREAMING_CHUNK:Creating 3D multi-ring atomic node styles... // ==========================================================================ATOMIC ELECTRON SPINNER ICON SYSTEM (MULTI-ORBITAL RINGS)========================================================================== */
 .stargate-star {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid #38bdf8;
-  background: radial-gradient(circle, #ffffff 15%, #0284c7 60%, rgba(2, 132, 199, 0.2) 100%);
-  box-shadow: 0 0 10px #38bdf8, 0 0 20px #0284c7;
-  transform: translate(-50%, -50%);
-  animation: stargate-pulse 3s infinite alternate ease-in-out;
-  cursor: pointer;
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	perspective: 800px;
+	transform-style: preserve-3d;
+	z-index: 10;
+	overflow: visible;
+	transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
+.stargate-star:hover {
+	transform: translate(-50%, -50%) scale(1.3);
+	z-index: 20;
+}
+/* --- QUANTUM NUCLEUS CORE --- */
+.stargate-star::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 12px;
+	height: 12px;
+	margin-top: -6px;
+	margin-left: -6px;
+	border-radius: 50%;
+	background: radial-gradient(circle, #ffffff 15%, #38bdf8 55%, #0284c7 100%);
+	box-shadow: 0 0 10px #38bdf8, 0 0 20px #0284c7;
+	animation: atomic-nucleus-pulse 1.8s infinite alternate ease-in-out;
+	pointer-events: none;
+	z-index: 5;
+}
+/* --- RING A: INNER CYAN ORBITAL RING --- */
 .stargate-star::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 50%;
-  border: 1px dashed #7dd3fc;
-  animation: ring-spin 8s linear infinite;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	border: 1.5px solid rgba(56, 189, 248, 0.85);
+	border-top-color: #ffffff;
+	border-bottom-color: rgba(2, 132, 199, 0.3);
+	box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+	animation: atomic-orbit-a 2.4s linear infinite;
+	pointer-events: none;
 }
-
+/* --- RING B: MID AMBER / GOLD ORBITAL RING --- */
+.stargate-star .orbit-ring-b {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	border: 1.5px solid rgba(251, 191, 36, 0.85);
+	border-right-color: #ffffff;
+	border-left-color: rgba(245, 158, 11, 0.25);
+	box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+	animation: atomic-orbit-b 1.9s linear infinite;
+	pointer-events: none;
+}
+/* --- RING C: OUTER DASHED PURPLE ORBITAL RING --- */
+.stargate-star .orbit-ring-c {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	border: 1.5px dashed rgba(168, 85, 247, 0.9);
+	border-top-color: #ffffff;
+	box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+	animation: atomic-orbit-c 3.8s linear infinite reverse;
+	pointer-events: none;
+}
+/* --- ORBITING ELECTRON PARTICLE --- */
+.stargate-star .electron {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	margin-top: -2.5px;
+	margin-left: -2.5px;
+	border-radius: 50%;
+	background: #ffffff;
+	box-shadow: 0 0 8px #ffffff, 0 0 14px #38bdf8;
+	animation: orbiting-electron 2.2s linear infinite;
+	pointer-events: none;
+	z-index: 6;
+}
+/* Star Node Text Label */
 .star-label {
-  position: absolute;
-  top: 26px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 9px;
-  color: #38bdf8;
-  background: rgba(3, 7, 18, 0.95);
-  padding: 2px 6px;
-  border: 1px solid #0284c7;
-  border-radius: 3px;
-  pointer-events: none;
-  opacity: 0.85;
-  white-space: nowrap;
+	position: absolute;
+	top: 48px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 9px;
+	color: #38bdf8;
+	background: rgba(3, 7, 18, 0.95);
+	padding: 2px 6px;
+	border: 1px solid #0284c7;
+	border-radius: 3px;
+	pointer-events: none;
+	opacity: 0.9;
+	white-space: nowrap;
+	box-shadow: 0 0 8px rgba(2, 132, 199, 0.4);
+	transition: all 0.2s ease;
 }
-
-/* Active Gate Selection Effect */
+/* Active Gate Selection (Supercharged Atomic Core State) */
 .stargate-star.active-gate {
-  border-color: #f59e0b;
-  box-shadow: 0 0 20px #f59e0b, 0 0 40px #fbbf24;
+	transform: translate(-50%, -50%) scale(1.25);
 }
-
+.stargate-star.active-gate::after {
+	background: radial-gradient(circle, #ffffff 20%, #fbbf24 60%, #f59e0b 100%);
+	box-shadow: 0 0 15px #fbbf24, 0 0 30px #f59e0b, 0 0 50px #d97706;
+	animation: atomic-nucleus-pulse 0.8s infinite alternate ease-in-out;
+}
+.stargate-star.active-gate::before {
+	border-color: rgba(245, 158, 11, 0.9);
+	border-top-color: #ffffff;
+	box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+	animation-duration: 1s;
+}
+.stargate-star.active-gate .orbit-ring-b {
+	border-color: rgba(56, 189, 248, 0.9);
+	border-right-color: #ffffff;
+	box-shadow: 0 0 12px rgba(56, 189, 248, 0.8);
+	animation-duration: 0.8s;
+}
+.stargate-star.active-gate .orbit-ring-c {
+	border-color: #f43f5e;
+	box-shadow: 0 0 14px rgba(244, 63, 94, 0.8);
+	animation-duration: 1.5s;
+}
 .stargate-star.active-gate .star-label {
-  color: #fbbf24;
-  border-color: #f59e0b;
+	color: #fbbf24;
+	border-color: #f59e0b;
+	box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+	background: rgba(12, 10, 2, 0.95);
 }
-
-/* Cyborg File Popup Modal Overlay */
+/* STREAMING_CHUNK:Defining subatomic orbital 3D keyframe animations... // ==========================================================================ATOMIC ORBITAL 3D KEYFRAME ANIMATIONS========================================================================== */
+/* Inner Cyan Ring 3D Tilt Orbit */
+@keyframes atomic-orbit-a {
+	0% {
+		transform: rotateX(65deg) rotateY(20deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(65deg) rotateY(20deg) rotateZ(360deg);
+	}
+}
+/* Mid Amber/Gold Ring 3D Tilt Orbit */
+@keyframes atomic-orbit-b {
+	0% {
+		transform: rotateX(25deg) rotateY(70deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(25deg) rotateY(70deg) rotateZ(360deg);
+	}
+}
+/* Outer Purple Ring 3D Tilt Orbit */
+@keyframes atomic-orbit-c {
+	0% {
+		transform: rotateX(-60deg) rotateY(40deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(-60deg) rotateY(40deg) rotateZ(360deg);
+	}
+}
+/* Orbiting Electron Revolution */
+@keyframes orbiting-electron {
+	0% {
+		transform: rotate(0deg) translateX(23px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg) translateX(23px) rotate(-360deg);
+	}
+}
+/* Quantum Core Nucleus Pulse */
+@keyframes atomic-nucleus-pulse {
+	0% {
+		transform: scale(0.85);
+		opacity: 0.8;
+	}
+	100% {
+		transform: scale(1.3);
+		opacity: 1;
+	}
+}
+/* STREAMING_CHUNK:Styling cyborg modal overlay and payload links... // Cyborg File Popup Modal Overlay */
 #cyborg-modal {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 900px;
-  height: 600px;
-  background: rgba(1, 2, 6, 0.88);
-  backdrop-filter: blur(4px);
-  z-index: 500;
-  justify-content: center;
-  align-items: center;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 900px;
+	height: 600px;
+	background: rgba(1, 2, 6, 0.88);
+	backdrop-filter: blur(4px);
+	z-index: 500;
+	justify-content: center;
+	align-items: center;
 }
-
 .modal-content {
-  width: 650px;
-  max-height: 420px;
-  background: #030712;
-  border: 1px solid #0284c7;
-  border-radius: 6px;
-  box-shadow: 0 0 25px rgba(2, 132, 199, 0.45);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+	width: 650px;
+	max-height: 420px;
+	background: #030712;
+	border: 1px solid #0284c7;
+	border-radius: 6px;
+	box-shadow: 0 0 25px rgba(2, 132, 199, 0.45);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 }
-
 .modal-header {
-  background: rgba(2, 132, 199, 0.15);
-  border-bottom: 1px solid #0284c7;
-  padding: 10px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	background: rgba(2, 132, 199, 0.15);
+	border-bottom: 1px solid #0284c7;
+	padding: 10px 14px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-
 #modal-title {
-  font-size: 11px;
-  color: #38bdf8;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+	font-size: 11px;
+	color: #38bdf8;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
-
 #modal-close {
-  background: transparent;
-  border: none;
-  color: #38bdf8;
-  font-size: 20px;
-  cursor: pointer;
-  line-height: 1;
-  transition: color 0.2s ease;
+	background: transparent;
+	border: none;
+	color: #38bdf8;
+	font-size: 20px;
+	cursor: pointer;
+	line-height: 1;
+	transition: color 0.2s ease;
 }
-
 #modal-close:hover {
-  color: #f59e0b;
+	color: #f59e0b;
 }
-
-/* Establish layout boundaries for WebKit scroll tracking engines */
+/* Modal Body Layout Container */
 #modal-body {
-  padding: 16px;
-  margin: 0;
-  overflow-y: auto !important;
-  max-height: 350px;
-  position: relative !important; 
-  display: block !important;
-  box-sizing: border-box;
+	padding: 16px;
+	margin: 0;
+	overflow-y: auto !important;
+	max-height: 350px;
+	position: relative !important;
+	display: block !important;
+	box-sizing: border-box;
 }
-
-/* --- ISOLATED CYBORG SYSTEM WEBKIT SCROLLBARS --- */
-#modal-body::-webkit-scrollbar {
-  width: 6px !important;
-  height: 6px !important;
-}
-
-#modal-body::-webkit-scrollbar-track {
-  background: #030712 !important;
-  border-radius: 3px;
-}
-
-#modal-body::-webkit-scrollbar-thumb {
-  background: rgba(2, 132, 199, 0.4) !important;
-  border-radius: 3px !important;
-  border: 1px solid rgba(56, 189, 248, 0.15);
-}
-
-#modal-body::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8 !important;
-  box-shadow: 0 0 8px #0284c7 !important;
-}
-
 /* File List & Link Styling */
 .cyborg-file-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
-
 .cyborg-file-list li {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
-
 .cyborg-link {
-  display: block;
-  color: #38bdf8;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 11px;
-  text-decoration: none;
-  background: rgba(2, 132, 199, 0.08);
-  padding: 8px 12px;
-  border: 1px solid rgba(2, 132, 199, 0.3);
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
-  word-break: break-all;
+	display: block;
+	color: #38bdf8;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 11px;
+	text-decoration: none;
+	background: rgba(2, 132, 199, 0.08);
+	padding: 8px 12px;
+	border: 1px solid rgba(2, 132, 199, 0.3);
+	border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+	word-break: break-all;
 }
-
 .cyborg-link:hover {
-  color: #ffffff;
-  background: rgba(2, 132, 199, 0.25);
-  border-color: #38bdf8;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
-  transform: translateX(4px);
+	color: #ffffff;
+	background: rgba(2, 132, 199, 0.25);
+	border-color: #38bdf8;
+	box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+	transform: translateX(4px);
 }
-
 .modal-error {
-  color: #ef4444;
-  font-size: 11px;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 8px;
+	color: #ef4444;
+	font-size: 11px;
+	font-family: 'Courier New', Courier, monospace;
+	padding: 8px;
 }
-
 .modal-empty {
-  color: #64748b;
-  font-size: 11px;
-  font-family: 'Courier New', Courier, monospace;
-  font-style: italic;
-  padding: 8px;
+	color: #64748b;
+	font-size: 11px;
+	font-family: 'Courier New', Courier, monospace;
+	font-style: italic;
+	padding: 8px;
 }
-
-/* Keyframe Core Engines */
-@keyframes stargate-pulse {
-  0% { box-shadow: 0 0 6px #38bdf8, 0 0 12px #0284c7; }
-  100% { box-shadow: 0 0 14px #38bdf8, 0 0 28px #0284c7, 0 0 40px #0369a1; }
+/* STREAMING_CHUNK:Configuring Firegem WebKit custom scrollbar system... // ==========================================================================AVIS-QUASAR STARGATE: ISOLATED FIREGEM WEBKIT SCROLLBAR SYSTEM========================================================================== */
+/* Global Custom Scrollbar Dimensions /html::-webkit-scrollbar,body::-webkit-scrollbar,#modal-body::-webkit-scrollbar {
+	width: 8px !important;
+	/ Vertical tracking thickness /height: 8px !important;
+	/ Horizontal tracking thickness */
 }
-
-@keyframes ring-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Track Gutter Background */
+html::-webkit-scrollbar-track,body::-webkit-scrollbar-track,#modal-body::-webkit-scrollbar-track {
+	background: #010206 !important;
+	border-radius: 4px;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8) !important;
 }
-/* ==========================================================================
-   AVIS-QUASAR STARGATE: ISOLATED FIREGEM WEBKIT SCROLLBAR SYSTEM
-   ========================================================================== */
-
-/* 1. Global Custom Scrollbar Dimensions for Both Axes */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-#modal-body::-webkit-scrollbar {
-    width: 8px !important;  /* Vertical tracking column thickness */
-    height: 8px !important; /* Horizontal tracking row thickness */
+/* Firegem Active Scroll Handle */
+html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb,#modal-body::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #ff7b00 0%, #f1e05a 100%) !important;
+	border-radius: 4px !important;
+	border: 1px solid rgba(1, 2, 6, 0.4) !important;
+	box-shadow: 0 0 8px rgba(232, 93, 4, 0.45), inset 0 0 4px rgba(255, 255, 255, 0.3) !important;
 }
-
-/* 2. Deep Space Track Gutter Background */
-html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track,
-#modal-body::-webkit-scrollbar-track {
-    background: #010206 !important; /* Locks color flat against core canvas fallback background */
-    border-radius: 4px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8) !important;
+/* Hover Flare Sequence */
+html::-webkit-scrollbar-thumb:hover,body::-webkit-scrollbar-thumb:hover,#modal-body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #ff9d00 0%, #ffffff 100%) !important;
+	box-shadow: 0 0 15px #ff7b00, 0 0 25px rgba(241, 224, 90, 0.6) !important;
 }
-
-/* 3. The Firegem Active Scroll Handle (Fleshed out with an intrinsic ember texture) */
-html::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb,
-#modal-body::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #ff7b00 0%, #f1e05a 100%) !important; /* Stargate Amber to Matrix Yellow */
-    border-radius: 4px !important;
-    border: 1px solid rgba(1, 2, 6, 0.4) !important; /* Subtle separator line to protect canvas visibility */
-    
-    /* Ambient Ember Shimmer Visual Anchor Effect */
-    box-shadow: 0 0 8px rgba(232, 93, 4, 0.45), inset 0 0 4px rgba(255, 255, 255, 0.3) !important;
-}
-
-/* 4. Hyper-Charged Hover Flare Event Sequence */
-html::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover,
-#modal-body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #ff9d00 0%, #ffffff 100%) !important; /* Intense bright core shift */
-    box-shadow: 0 0 15px #ff7b00, 0 0 25px rgba(241, 224, 90, 0.6) !important; /* Heavy radial lighting bleed */
-}
-
-/* 5. Handle Corner Corner Window Joint (Eliminates default browser block overlays) */
-html::-webkit-scrollbar-corner,
-body::-webkit-scrollbar-corner {
-    background: #010206 !important;
-}
-
-
-.modalTitle{
-	font-size:2px;
+/* Scrollbar Corner Joint */
+html::-webkit-scrollbar-corner,body::-webkit-scrollbar-corner {
+	background: #010206 !important;
 }

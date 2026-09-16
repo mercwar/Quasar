@@ -10,11 +10,28 @@
 # 🌌 Quasar Stargate & Core Guide
 
 ## Overview
-
+<a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
+<img 
+    src="qsg.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
+</a>
 
 The Quasar Stargate is the visual navigation console for AVIS‑DATALAKE (AVIS‑DL). Each active gate represents a dynamic target payload node. Engaging a gate decodes its .cyborg manifest or .quasar star-map stream, opening an interactive modal to route payload records directly through GitHub.
 Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages.
+
 ## Deploying Your Own Stargate
+<a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
+<img 
+    src="j-tron.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
+</a>
+
+#
+
 While you can continue using the default AVIS-DL ecosystem, you can also clone the repository to host Quasar on your own PHP/CGI server or GitHub Pages. The repository contains a fully functional index.html and JavaScript file ready for deployment.
 To set up your personal NEXUS Gateway:
 
@@ -27,18 +44,20 @@ Once configured, you can use the NEXUS Gateway to navigate. Note that to manage 
 To create your own Stargate, it is only necessary to clone Quasar and connect to NEXUS from AVIS-DL 
 
 
+The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
 
+#
+
+
+<a href="https://cron.iblogger.org/AVIS-DATALAKE">
+  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
 
 👉 *Uplink:* [AVIS-DATALAKE - Stargate interface](https://cron.iblogger.org/AVIS-DATALAKE)  
 👉 *Uplink:* [NEXUS - Stargate interface](https://cron.iblogger.org/NEXUS)
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
 
-<a href="https://cron.iblogger.org/AVIS-DATALAKE">
-  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
-</a>
-
-The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
 
 ## AVIS Starmap Project
 An advanced, decentralized DHTML star system visualization engine and data indexing ecosystem running natively on GitHub Pages. The project maps structural data files onto an interactive stellar node network.

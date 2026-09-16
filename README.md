@@ -85,7 +85,13 @@ The front-end map terminal dynamically translates backend stargate registries in
 * Deterministic Matrix Generation: Node coordinates are generated procedurally from file text strings via character-based checksum metrics. Every unique data point maps permanently to its own cosmic signature location.
 * Ambient Interface Rendering: The map utilizes explicit structural layouts, an alpha-transparency vector blend mask, and glow filters to overlay HUD system statistics, data list models, and interactive terminals flawlessly.
 
-## Gateway Ingress URL Protocol
+## Gateway URL Protocol
+
+<a href="https://cron.iblogger.org/NEXUS">
+  <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
+
+
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
 *Quasar protocol:*
@@ -103,10 +109,6 @@ https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/file
 - You will see the tutorial Quasar load
 - GOOD LUCK!
 - ###### "<i>I am CVBGOD, and I have given it to you</i>!"
-
-<a href="https://cron.iblogger.org/NEXUS">
-  <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
-</a>
 
 
 ------------------------------

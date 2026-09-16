@@ -66,7 +66,7 @@ The ecosystem relies on two specialized, plain-text plain-text data registry lay
 
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 
-    src="ss2.png" 
+    src="ss3.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />

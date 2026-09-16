@@ -94,7 +94,7 @@ The front-end map terminal dynamically translates backend stargate registries in
 
 #
 
-#### Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
+###### Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
 
 

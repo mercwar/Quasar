@@ -7,7 +7,7 @@
 />
 </a>
 
-# 🌌 Quasar Stargate & Core Guide
+# 🌌 Quasar Stargate Tutorial
 
 ## Overview
 

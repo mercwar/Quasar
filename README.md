@@ -64,6 +64,14 @@ An advanced, decentralized DHTML star system visualization engine and data index
 ## Core System Architecture
 The ecosystem relies on two specialized, plain-text plain-text data registry layouts designed to link distributed nodes chronologically across the AVIS-DL datalake pipeline:
 
+<a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
+<img 
+    src="ss2.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
+</a>
+
 * .cyborg: Node Coordinate Matrix
 Plain-text comma-separated CSV paths. Every path represents a unique data coordinate node within the network infrastructure. Valid entries are restricted to ecosystem extensions (.json, .html, .md, .js, .css, .txt, .xml, .cyborg, .quasar).
 * .quasar: Stargate Manifest Indexer

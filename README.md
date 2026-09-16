@@ -10,6 +10,11 @@
 # 🌌 Quasar Stargate & Core Guide
 
 ## Overview
+
+The Quasar Stargate is the visual navigation console for AVIS‑DATALAKE (AVIS‑DL). Each active gate represents a dynamic target payload node. Engaging a gate decodes its .cyborg manifest or .quasar star-map stream, opening an interactive modal to route payload records directly through GitHub.
+Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages.
+
+
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 
     src="qsg.png" 
@@ -18,8 +23,11 @@
 />
 </a>
 
-The Quasar Stargate is the visual navigation console for AVIS‑DATALAKE (AVIS‑DL). Each active gate represents a dynamic target payload node. Engaging a gate decodes its .cyborg manifest or .quasar star-map stream, opening an interactive modal to route payload records directly through GitHub.
-Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages.
+"<i>And now... the OFFICIAL Quasar Stargate README</i> !"
+
+- ###### "<i>I am CVBGOD, and I have given it to you</i>!"
+- GOOD LUCK!
+#
 
 ## Deploying Your Own Stargate
 
@@ -110,9 +118,7 @@ https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/file
 - Select view with 'HTML Preview'
 - Scroll to the bottom of the JSON after the page loads, in the window you will see a scroll bar on a small screen
 - Look for a blue button  'ENGAGE STARGATE GATEWAY →' click it!
-- You will see the tutorial Quasar load
-- GOOD LUCK!
-- ###### "<i>I am CVBGOD, and I have given it to you</i>!"
+- You will see the tutorial Quasar load and you can now click into tutorial 1 from inside of NEXUS
 
 
 ------------------------------

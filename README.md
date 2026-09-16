@@ -72,6 +72,8 @@ The ecosystem relies on two specialized, plain-text plain-text data registry lay
 />
 </a>
 
+#
+
 * .cyborg: Node Coordinate Matrix
 Plain-text comma-separated CSV paths. Every path represents a unique data coordinate node within the network infrastructure. Valid entries are restricted to ecosystem extensions (.json, .html, .md, .js, .css, .txt, .xml, .cyborg, .quasar).
 * .quasar: Stargate Manifest Indexer

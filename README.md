@@ -91,8 +91,9 @@ Master stargate catalog manifest files. A .quasar file holds a raw comma-separat
 ## DHTML Visualization Engine
 The front-end map terminal dynamically translates backend stargate registries into an atmospheric space canvas using HTML5, CSS3, and JavaScript.
 
-* Deterministic Matrix Generation: Node coordinates are generated procedurally from file text strings via character-based checksum metrics. Every unique data point maps permanently to its own cosmic signature location.
-* Ambient Interface Rendering: The map utilizes explicit structural layouts, an alpha-transparency vector blend mask, and glow filters to overlay HUD system statistics, data list models, and interactive terminals flawlessly.
+- Deterministic Matrix Generation: Saving AVIS-DATALAKE files to the AVIS-DL is how Quasars are constructed and automatically renderd..
+- It is possible to create your own Starmap or javascript for Rendering in NEXUS using the AVIS-DL
+- It's possible to program a Stargate into NEXUS and hyperlink to it using dhtml from within the AVIS-DATALAKE 'Home' files.
 
 ## Gateway URL Protocol
 

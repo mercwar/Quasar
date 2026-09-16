@@ -20,6 +20,7 @@ html,body {
 	background-position: center top;
 	background-attachment: fixed;
 }
+
 /* STREAMING_CHUNK:Styling viewport layout and HUD log panel... // Fixed 900x600 Viewport Container */
 #viewport {
 	position: relative;
@@ -399,31 +400,49 @@ html,body {
 	font-style: italic;
 	padding: 8px;
 }
-/* STREAMING_CHUNK:Configuring Firegem WebKit custom scrollbar system... // ==========================================================================AVIS-QUASAR STARGATE: ISOLATED FIREGEM WEBKIT SCROLLBAR SYSTEM========================================================================== */
-/* Global Custom Scrollbar Dimensions /html::-webkit-scrollbar,body::-webkit-scrollbar,#modal-body::-webkit-scrollbar {
-	width: 8px !important;
-	/ Vertical tracking thickness /height: 8px !important;
-	/ Horizontal tracking thickness */
+/* STREAMING_CHUNK:Configuring Firegem WebKit custom scrollbar system... 
+==========================================================================
+AVIS-QUASAR STARGATE: ISOLATED FIREGEM WEBKIT SCROLLBAR SYSTEM
+========================================================================== */
+
+/* Global Custom Scrollbar Dimensions */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#modal-body::-webkit-scrollbar {
+	width: 8px !important;       /* Vertical tracking thickness */
+	height: 8px !important;      /* Horizontal tracking thickness */
 }
-/* Track Gutter Background */
-html::-webkit-scrollbar-track,body::-webkit-scrollbar-track,#modal-body::-webkit-scrollbar-track {
+
+/* Track Gutter Background - Deep Obsidian Core */
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+#modal-body::-webkit-scrollbar-track {
 	background: #010206 !important;
-	border-radius: 4px;
-	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8) !important;
-}
-/* Firegem Active Scroll Handle */
-html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb,#modal-body::-webkit-scrollbar-thumb {
-	background: linear-gradient(180deg, #ff7b00 0%, #f1e05a 100%) !important;
 	border-radius: 4px !important;
-	border: 1px solid rgba(1, 2, 6, 0.4) !important;
-	box-shadow: 0 0 8px rgba(232, 93, 4, 0.45), inset 0 0 4px rgba(255, 255, 255, 0.3) !important;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9) !important;
 }
-/* Hover Flare Sequence */
-html::-webkit-scrollbar-thumb:hover,body::-webkit-scrollbar-thumb:hover,#modal-body::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(180deg, #ff9d00 0%, #ffffff 100%) !important;
-	box-shadow: 0 0 15px #ff7b00, 0 0 25px rgba(241, 224, 90, 0.6) !important;
+
+/* Firegem Active Scroll Handle - Molten Ruby to Amber Gradient */
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+#modal-body::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #d90429 0%, #f77f00 50%, #fcbf49 100%) !important;
+	border-radius: 4px !important;
+	border: 1px solid #010206 !important;
+	box-shadow: 0 0 10px rgba(217, 4, 41, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.4) !important;
+	transition: all 0.2s ease-in-out !important;
 }
+
+/* Hover Flare Sequence - Superheated Plasma Ignition */
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+#modal-body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #ff0055 0%, #ff9e00 70%, #ffffff 100%) !important;
+	box-shadow: 0 0 18px #ff5d00, 0 0 30px rgba(255, 214, 10, 0.8), inset 0 1px 3px #ffffff !important;
+}
+
 /* Scrollbar Corner Joint */
-html::-webkit-scrollbar-corner,body::-webkit-scrollbar-corner {
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
 	background: #010206 !important;
 }

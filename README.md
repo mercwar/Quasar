@@ -22,6 +22,7 @@ The Quasar Stargate is the visual navigation console for AVISâ€‘DATALAKE (AVISâ€
 Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages.
 
 ## Deploying Your Own Stargate
+
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 
     src="j-tron.png" 
@@ -91,10 +92,13 @@ The front-end map terminal dynamically translates backend stargate registries in
   <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 
+#
 
-Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
+#### Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
-*Quasar protocol:*
+
+
+###### *Quasar protocol:*
 ```
 https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/filenum-title.*avis-datalake home extenstions*>
 ```

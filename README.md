@@ -75,7 +75,7 @@ You can continue using the default **AVIS‑DL ecosystem**, or you can **clone t
 
 ---
 
-## 🌌 Creating Your Own Stargate
+## 💫 Creating Your Own Stargate
 
 To build a **Stargate Gateway**:  
 - Clone **Quasar**.  

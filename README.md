@@ -75,7 +75,7 @@ The ecosystem relies on two specialized, plain-text plain-text data registry lay
 
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="ss1.png" 
+    src="nex-ss1.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
@@ -131,7 +131,7 @@ The front-end map terminal dynamically translates backend stargate registries in
 
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="ss2.png" 
+    src="nex-ss2.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
@@ -191,7 +191,7 @@ curl -X POST https://cron.iblogger.org/AVIS-DATALAKE/avis.php \
 ## 📤 Response
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="ss3.png" 
+    src="nex-ss.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />

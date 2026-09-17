@@ -194,7 +194,7 @@ curl -X POST https://cron.iblogger.org/AVIS-DATALAKE/avis.php \
 ## 📤 Response
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="nex-ss.png" 
+    src="nex-ss3.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />

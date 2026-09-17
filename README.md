@@ -1,4 +1,3 @@
-
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Constellation/index.html">
 <img 
     src="https://raw.githubusercontent.com/mercwar/Robo-Knight-Gallery/refs/heads/main/Version%207/image_d2a07390.png" 
@@ -17,7 +16,7 @@ Mathematically validated for recursive potential, Quasar has the proven capabili
 
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 
-    src="qsg.png" 
+    src="https://github.com/mercwar/Quasar/blob/main/qsg.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
@@ -34,14 +33,13 @@ Mathematically validated for recursive potential, Quasar has the proven capabili
 
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 
-    src="j-tron.png" 
+    src="https://github.com/mercwar/Quasar/blob/main/j-tron.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
 </a>
 
 #
-
 # 🚀 Setting Up Your Personal NEXUS Gateway
 
 You can continue using the default **AVIS‑DL ecosystem**, or you can **clone the repository** to host **Quasar** on your own PHP/CGI server or GitHub Pages. The repository already includes a fully functional `index.html` and JavaScript file ready for deployment.
@@ -76,6 +74,8 @@ You can continue using the default **AVIS‑DL ecosystem**, or you can **clone t
 ---
 
 ## 💫 Creating Your Own Stargate
+
+
 
 To build a **Stargate Gateway**:  
 - Clone **Quasar**.  
@@ -118,11 +118,44 @@ The ecosystem relies on two specialized, plain-text plain-text data registry lay
 
 # 🌠 Quasar File Generation Matrix
 
+
+The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
+
+#
+
+
+<a href="https://cron.iblogger.org/AVIS-DATALAKE">
+  <img src="https://github.com/mercwar/Quasar/blob/main/adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
+
+👉 *Uplink:* [AVIS-DATALAKE - Stargate interface](https://cron.iblogger.org/AVIS-DATALAKE)  
+👉 *Uplink:* [NEXUS - Stargate interface](https://cron.iblogger.org/NEXUS)
+
+👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
+
+
+## AVIS Starmap Project
+An advanced, decentralized DHTML star system visualization engine and data indexing ecosystem running natively on GitHub Pages. The project maps structural data files onto an interactive stellar node network.
+## Core System Architecture
+The ecosystem relies on two specialized, plain-text plain-text data registry layouts designed to link distributed nodes chronologically across the AVIS-DL datalake pipeline:
+
+<a href="https://cron.iblogger.org/NEXUS">
+<img 
+    src="https://github.com/mercwar/Quasar/blob/main/nex-ss1.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
+</a>
+
+#
+
+###  ✅ Nexus Gateway ➡️ Avis-Datalake  ➡️  Quasar Stargate 💥
+
 Welcome to the data compilation core for Quasar. This document outlines the operational protocols for loading, structuring, validation, and generation of pristine Quasar file targets natively using data pipelines fed from the **Nexus** and **Avis** datalakes.
 
 ---
 
-# ✅ Nexus Gateway ➡️ Avis-Datalake  ➡️  Quasar Stargate 💥
+## 📖 Operational Pipeline Tutorial
 
 The workspace features a continuous data loop designed to pass model configurations and asset payloads cleanly between layout frames. Follow this exact workflow sequence to sync your environments:
 
@@ -165,7 +198,7 @@ The front-end map terminal dynamically translates backend stargate registries in
 
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="nex-ss2.png" 
+    src="https://github.com/mercwar/Quasar/blob/main/nex-ss2.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
@@ -226,7 +259,7 @@ curl -X POST https://cron.iblogger.org/AVIS-DATALAKE/avis.php \
 ## 📤 Response
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="nex-ss4.png" 
+    src="https://github.com/mercwar/Quasar/blob/main/nex-ss4.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />

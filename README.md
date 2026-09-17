@@ -75,7 +75,7 @@ The ecosystem relies on two specialized, plain-text plain-text data registry lay
 
 <a href="https://cron.iblogger.org/NEXUS">
 <img 
-    src="ss3.png" 
+    src="ss1.png" 
     alt="Mercwar Quasar" 
     style="width:100%; height:auto;"
 />
@@ -130,9 +130,12 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway URL Protocol
 
 <a href="https://cron.iblogger.org/NEXUS">
-  <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+<img 
+    src="ss2.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
 </a>
-
 #
 
 - Launch localized system maps directly by supplying a target coordinate
@@ -186,7 +189,13 @@ curl -X POST https://cron.iblogger.org/AVIS-DATALAKE/avis.php \
 ---
 
 ## 📤 Response
-
+<a href="https://cron.iblogger.org/NEXUS">
+<img 
+    src="ss3.png" 
+    alt="Mercwar Quasar" 
+    style="width:100%; height:auto;"
+/>
+</a>
 The handler returns a **status block**:
 
 - ✅ **Success** → `[SUCCESS]` with link to JSON manifest:

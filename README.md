@@ -142,10 +142,10 @@ The front-end map terminal dynamically translates backend stargate registries in
 # AVIS Datalake — Professional API Reference (`avis.php`)
 
 ## 📡 Endpoint
-All payloads are submitted to the ingestion gateway:
+All payloads are submitted to the downlink gateway:
 
 ```
-POST https://<your-server>/avis.php
+POST https://[<your-server>](https://cron.iblogger.org/AVIS-DATALAKE/
 ```
 
 ---

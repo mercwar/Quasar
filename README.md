@@ -122,7 +122,7 @@ Welcome to the data compilation core for Quasar. This document outlines the oper
 
 ---
 
-## 📖 Operational Pipeline Tutorial
+# ✅ Nexus Gateway ➡️ Avis-Datalake  ➡️  Quasar Stargate 💥
 
 The workspace features a continuous data loop designed to pass model configurations and asset payloads cleanly between layout frames. Follow this exact workflow sequence to sync your environments:
 

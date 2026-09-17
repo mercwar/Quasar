@@ -30,7 +30,7 @@ Mathematically validated for recursive potential, Quasar has the proven capabili
   
 #
 
-## Deploying Your Own Stargate
+## 🌈 Deploying Your Own Stargate
 
 <a target="_self" title="CLICK HERE to ENTER the GATEWAY FREE!" href="https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar">
 <img 

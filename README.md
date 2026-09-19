@@ -7,23 +7,56 @@
 />
 </a>
 
-# 🌌 Quasar Stargate & Core Guide
+# 🌌 Quasar Stargate & Core Guide Overview
 
-## Overview
 
-The Quasar Stargate is the visual navigation console for AVIS‑DATALAKE (AVIS‑DL). Each active gate represents a dynamic target payload node. Engaging a gate decodes its  manifest or  star-map stream, opening an interactive modal to route payload records directly through GitHub. 
-Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional Artifact files from other players, you can build a JavaScript web application hosted entirely via GitHub Pages. 
-Deploying Your Own Stargate 
-While you can continue using the default AVIS-DL ecosystem, you can also clone the repository to host Quasar on your own PHP/CGI server or GitHub Pages. The repository contains a fully functional  and JavaScript file ready for deployment. 
-To set up your personal NEXUS Gateway: 
 
-1. Clone the repository to your own GitHub account. 
-2. Update the Nexus configurations by replacing the default  repository path with your own DataLake details. 
-3. Uplink your JSON application to AVIS-DATALAKE to point end-users toward your cloned repository using the following URL structure: 
+The **Quasar Stargate** is the visual navigation console for **AVIS‑DATALAKE (AVIS‑DL)**. Each active gate represents a dynamic target payload node. Engaging a gate decodes its manifest or star‑map stream, opening an interactive modal to route payload records directly through GitHub.  
 
-Once configured, you can use the NEXUS Gateway to navigate. Note that to manage your own standalone DataLake records, you will need to save them to your own private host or server-side application. 
-To create your own Stargate, it is only necessary to... 
-To help you finish the final thought, could you clarify what the absolute minimum requirement is to create a Stargate (e.g., fork the repo, configure a single JSON file, or have a GitHub account)? 
+Mathematically validated for recursive potential, Quasar has the proven capability to operate as a fully staged, multiplayer interactive environment. By linking to functional **Artifact files** from other players, you can build a JavaScript web application hosted entirely via GitHub Pages.
+
+---
+
+## 🚀 Deploying Your Own Stargate
+
+While you can continue using the default **AVIS‑DL ecosystem**, you can also clone the repository to host Quasar on your own PHP/CGI server or GitHub Pages. The repository contains a fully functional `index.html` and JavaScript file ready for deployment.
+
+---
+
+<a href="https://cron.iblogger.org/Nexus" title="Enter NEXUS for FREE and use QUASAR!">
+  <img src="qrm.jpg" style="border: none; max-width: 100%; height: auto;">
+</a>
+
+ GOOD LUCK!
+###### "<i>I am CVBGOD, and I have given it to you</i>!"
+## 🔧 Setting Up Your Personal NEXUS Gateway
+
+1. **Clone Repository**  
+   Fork or clone the Quasar repository into your own GitHub account.  
+
+2. **Update Configurations**  
+   Replace the default repository path with your own DataLake details in the Nexus configuration files.  
+
+3. **Uplink JSON Application**  
+   Point end‑users toward your cloned repository using the following URL structure:  
+
+   ```
+   https://<your_github_username>.github.io/Quasar/index.html?quasar=<your_dl>/dl/year/month/day/1-Tutorial.quasar
+   ```
+
+---
+
+## 🌐 Gateway Access
+
+Once configured, you can use the **NEXUS Gateway** to navigate. To manage your own standalone DataLake records, save them to your own private host or server‑side application.
+
+---
+
+## ✨ Minimum Requirement
+
+To create your own Stargate, it is only necessary to **fork the Quasar repository** into your GitHub account.  
+- This gives you a fully functional Stargate hosted via GitHub Pages.  
+- Additional steps (configuring JSON, Nexus uplinks, private hosting) enhance functionality but are optional.  
 
 
 
@@ -32,12 +65,10 @@ To help you finish the final thought, could you clarify what the absolute minimu
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
 
-<a href="https://cron.iblogger.org/Nexus" title="Enter NEXUS for FREE and use QUASAR!">
-  <img src="qrm.jpg" style="border: none; max-width: 100%; height: auto;">
+<a href="https://cron.iblogger.org/AVIS-DATALAKE" title="Enter AVIS-DATALAKE for FREE and use QUASAR!">
+  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 
- GOOD LUCK!
-###### "<i>I am CVBGOD, and I have given it to you</i>!"
 
 The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
 
@@ -60,9 +91,6 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway Ingress URL Protocol
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
-<a href="https://cron.iblogger.org/AVIS-DATALAKE" title="Enter AVIS-DATALAKE for FREE and use QUASAR!">
-  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
-</a>
 
 
 *Quasar protocol:*

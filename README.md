@@ -32,9 +32,12 @@ To help you finish the final thought, could you clarify what the absolute minimu
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
 
-<a href="https://cron.iblogger.org/AVIS-DATALAKE">
-  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+<a href="https://cron.iblogger.org/NEXUS">
+  <img src="qrm.jpg" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
+
+ GOOD LUCK!
+###### "<i>I am CVBGOD, and I have given it to you</i>!"
 
 The stargate is avaiblable at the  [Quasar](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Tutorial
 
@@ -57,6 +60,11 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway Ingress URL Protocol
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
+<a href="https://cron.iblogger.org/AVIS-DATALAKE">
+  <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
+</a>
+
+
 *Quasar protocol:*
 ```
 https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/filenum-title.*avis-datalake home extenstions*>
@@ -70,8 +78,7 @@ https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/file
 - Scroll to the bottom of the JSON after the page loads, in the window you will see a scroll bar on a small screen
 - Look for a blue button  'ENGAGE STARGATE GATEWAY →' click it!
 - You will see the tutorial Quasar load
-- GOOD LUCK!
-- ###### "<i>I am CVBGOD, and I have given it to you</i>!"
+
 
 <a href="https://cron.iblogger.org/NEXUS">
   <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">

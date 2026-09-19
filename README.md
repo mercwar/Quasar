@@ -32,7 +32,7 @@ To help you finish the final thought, could you clarify what the absolute minimu
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
 
-<a href="https://cron.iblogger.org/Nexus" title="Enter Nexus for FREE and use QUASAR">
+<a href="https://cron.iblogger.org/Nexus" title="Enter NEXUS for FREE and use QUASAR!">
   <img src="qrm.jpg" style="border: none; max-width: 100%; height: auto;">
 </a>
 
@@ -60,7 +60,7 @@ The front-end map terminal dynamically translates backend stargate registries in
 ## Gateway Ingress URL Protocol
 Launch localized system maps directly by supplying a target manifest coordinate route via the quasar global GET query parameter layer:
 
-<a href="https://cron.iblogger.org/AVIS-DATALAKE">
+<a href="https://cron.iblogger.org/AVIS-DATALAKE" title="Enter AVIS-DATALAKE for FREE and use QUASAR!">
   <img src="adl-bg-bnr.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 
@@ -80,7 +80,7 @@ https://mercwar.github.io/Quasar/index.html?quasar=<repo/dir/year/month/day/file
 - You will see the tutorial Quasar load
 
 
-<a href="https://cron.iblogger.org/NEXUS">
+<a href="https://cron.iblogger.org/NEXUS" title="Enter NEXUS for FREE and use QUASAR!">
   <img src="ss1.png" alt="AVIS Banner" style="border: none; max-width: 100%; height: auto;">
 </a>
 

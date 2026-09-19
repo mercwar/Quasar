@@ -1,5 +1,5 @@
 /* ==========================================================================
-   🔮 AVIS DATALAKE FIREGEM THEME - Black Glass Modal (Gold + Orange Highlights)
+   🔮 AVIS DATALAKE FIREGEM THEME - Clean Dual-Scrollbar Fix (Height ~400px)
    ========================================================================== */
 
 #cyborg-modal {
@@ -8,50 +8,56 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.75); /* black glass backdrop */
-  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: none;            /* ❌ No blur on backdrop */
   z-index: 9999;
 }
 
 #cyborg-modal .modal-content {
-  background: rgba(15, 15, 20, 0.9); /* black glass core */
-  border: 1px solid rgba(255, 215, 0, 0.25); /* gold accent border */
+  background: rgba(15, 15, 20, 0.95); 
+  border: 1px solid rgba(255, 215, 0, 0.3); 
   border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
-              0 0 40px rgba(255, 215, 0, 0.5);
-  width: 800px;          /* wider modal */
-  max-width: 95%;        /* allow more horizontal space */
-  max-height: 90vh;      /* taller modal relative to viewport */
-  color: #ffffff;        /* white font */
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.5),
+              0 0 40px rgba(255, 215, 0, 0.4);
+  width: 800px;          
+  max-width: 95%;        
+  height: 410px;         /* 🔧 Forced fixed height at approximately 400px */
+  max-height: 410px;     
+  color: #ffffff;        
   font-family: 'Segoe UI', 'Consolas', monospace;
-  overflow-y: auto;      /* scroll only if truly needed */
+  
+  /* 🔒 CRITICAL FIX: Hides the outer window's vertical scrollbar completely */
+  overflow: hidden !important; 
+  
   animation: firegem-fadein 0.4s ease-out;
-  background-image: url('sg-rpt.png'); /* 🔮 background image */
+  background-image: url('sg-rpt.png'); 
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column; /* Organizes header and body vertically */
 }
 
 #cyborg-modal .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.85); /* black glass bar */
+  background: rgba(0, 0, 0, 0.9); 
   padding: 12px 18px;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #ffffff; /* white font */
-  text-shadow: 0 0 6px #ff8c00; /* orange glow */
+  color: #ffffff; 
+  text-shadow: 0 0 6px #ff8c00; 
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  flex-shrink: 0;        /* Blocks header from shrinking */
 }
 
 #cyborg-modal #modal-title,
 .modalTitle {
-  font-size: 20px;              /* readable size */
+  font-size: 20px;              
   font-weight: bold;
-  color: #ffd700;               /* gold title text */
-  text-shadow: 0 0 6px #ff8c00; /* orange glow */
+  color: #ffd700;               
+  text-shadow: 0 0 6px #ff8c00; 
   letter-spacing: 1px;
-  font-family: 'Segoe UI', 'Consolas', monospace;
 }
 
 #cyborg-modal #modal-close {
@@ -63,17 +69,45 @@
   transition: color 0.3s ease, transform 0.2s ease;
 }
 #cyborg-modal #modal-close:hover {
-  color: #ff8c00; /* orange highlight */
+  color: #ff8c00; 
   transform: scale(1.2);
 }
 
+/* 🔄 INTERNAL SCROLLING LAYER (The File List) */
 #cyborg-modal #modal-body {
   padding: 20px;
-  max-height: 70vh;      /* give body more breathing room */
-  overflow-y: auto;
+  flex-grow: 1;          /* Takes up all remaining space below the header */
+  
+  /* 🔓 CRITICAL FIX: Forces scrolling ONLY within this internal workspace container */
+  overflow-y: auto !important; 
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-/* --- File List as Gold/Orange Full-Width Buttons with Left Indicators --- */
+/* --- Black Glass + Yellow Scrollbar Kit for Internal File List --- */
+#cyborg-modal #modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+#cyborg-modal #modal-body::-webkit-scrollbar-track {
+  background: rgba(10, 10, 12, 0.85); /* Black glass track layout */
+  border-radius: 4px;
+}
+#cyborg-modal #modal-body::-webkit-scrollbar-thumb {
+  background: #ffd700; /* 🟡 Sharp solid yellow slider handle */
+  border-radius: 4px;
+  border: 1px solid #0f0f14;
+}
+#cyborg-modal #modal-body::-webkit-scrollbar-thumb:hover {
+  background: #ff8c00; /* Shifts orange on interaction hover */
+}
+
+/* Firefox Support Layout Mapping */
+#cyborg-modal #modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #ffd700 rgba(10, 10, 12, 0.85);
+}
+
+/* --- File List Formatting Adjustments --- */
 .cyborg-file-list {
   list-style: none;
   padding: 0;
@@ -81,145 +115,38 @@
   display: grid;
   gap: 10px;
 }
-.cyborg-file-list li {
-  margin: 0;
-}
-.cyborg-file-list a.cyborg-link {
-  display: block;              /* full block element */
-  width: calc(100% - 12px);    /* add right margin to prevent overflow */
-  margin-right: 12px;          /* spacing to eliminate scrollbar */
-  padding: 12px 18px;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #ffd700;   /* gold border */
-  border-left: 6px solid #ff8c00; /* 🔥 left-side indicator */
-  border-radius: 6px;
-  color: #ffffff;              /* white font */
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: all 0.25s ease;
-  text-align: left;
-  position: relative;
-  box-shadow: -6px 0 12px rgba(255, 140, 0, 0.6); /* orange glow */
-}
-.cyborg-file-list a.cyborg-link:hover {
-  background: rgba(255, 140, 0, 0.25);
-  border-color: #ff8c00;
-  border-left-color: #ffd700; /* gold highlight */
-  color: #ffd700;             /* gold text */
-  box-shadow: -6px 0 16px rgba(255, 140, 0, 0.9);
-  transform: translateX(4px);
-}
-.cyborg-file-list a.cyborg-link:active {
-  transform: scale(0.96);
-  border-left-color: #ffffff; /* flash white on click */
-  box-shadow: -6px 0 20px rgba(255, 255, 255, 0.8);
-}
-
-/* --- Animations --- */
-@keyframes firegem-fadein {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-@keyframes firegem-border-glow {
-  0%   { border-left-color: #ff8c00; }
-  50%  { border-left-color: #ffd700; }
-  100% { border-left-color: #ff8c00; }
-}
-.cyborg-file-list a.cyborg-link.glow {
-  animation: firegem-border-glow 2s infinite ease-in-out;
-}
-/* ==========================================================================
-   🔮 AVIS DATALAKE FIREGEM THEME - Scrollbar Fix
-   ========================================================================== */
-
 .cyborg-file-list a.cyborg-link {
   display: block;              
-  width: 100%;                 /* occupy full width */
-  box-sizing: border-box;      /* include padding/border in width calc */
+  width: 100%;                 
+  box-sizing: border-box;      
   padding: 12px 18px;
-  margin-right: 0;             /* eliminate overflow on right side */
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid #ffd700;   /* gold border */
-  border-left: 6px solid #ff8c00; /* 🔥 left-side indicator */
+  border: 1px solid #ffd700;   
+  border-left: 6px solid #ff8c00; 
   border-radius: 6px;
-  color: #ffffff;              /* white font */
+  color: #ffffff;              
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.05em;
   transition: all 0.25s ease;
   text-align: left;
-  position: relative;
-  box-shadow: -6px 0 12px rgba(255, 140, 0, 0.6); /* orange glow */
+  box-shadow: -6px 0 12px rgba(255, 140, 0, 0.4);
 }
-
 .cyborg-file-list a.cyborg-link:hover {
-  background: rgba(255, 140, 0, 0.25);
+  background: rgba(11, 20, 120, 0.15);
   border-color: #ff8c00;
-  border-left-color: #ffd700; /* gold highlight */
-  color: #ffd700;             /* gold text */
-  box-shadow: -6px 0 16px rgba(255, 140, 0, 0.9);
+  border-left-color: #ffd700; 
+color: #4afb62;
+           
+  box-shadow: -6px 0 6px rgba(255, 140, 0, 0.7);
   transform: translateX(4px);
 }
-
 .cyborg-file-list a.cyborg-link:active {
-  transform: scale(0.96);
-  border-left-color: #ffffff; /* flash white on click */
-  box-shadow: -6px 0 20px rgba(255, 255, 255, 0.8);
-}
-/* ==========================================================================
-   🔮 AVIS DATALAKE FIREGEM THEME - Modal Height Fix (Viewport Units)
-   ========================================================================== */
-
-#cyborg-modal .modal-content {
-  width: 800px;          /* wider modal */
-  max-width: 95%;        /* allow more horizontal space */
-  max-height: 80vh;      /* 🔧 modal height relative to viewport */
-  overflow-y: auto;      /* scroll only if truly needed */
-  background: rgba(15, 15, 20, 0.9);
-  border: 1px solid rgba(255, 215, 0, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
-              0 0 40px rgba(255, 215, 0, 0.5);
-  color: #ffffff;
-  font-family: 'Segoe UI', 'Consolas', monospace;
-  animation: firegem-fadein 0.4s ease-out;
-  background-image: url('sg-rpt.png');
-  background-size: cover;
-  background-position: center;
+  transform: scale(0.97);
+  border-left-color: #ffffff; 
 }
 
-#cyborg-modal #modal-body {
-  padding: 20px;
-  max-height: 70vh;      /* body height relative to viewport */
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-/* ==========================================================================
-   🔮 AVIS DATALAKE FIREGEM THEME - Modal Height Fix
-   ========================================================================== */
-
-#cyborg-modal .modal-content {
-  width: 800px;          /* wider modal */
-  max-width: 95%;        /* allow more horizontal space */
-  max-height: 500px;     /* 🔧 increased max height */
-  overflow-y: auto;      /* scroll only if truly needed */
-  background: rgba(15, 15, 20, 0.9);
-  border: 1px solid rgba(255, 215, 0, 0.25);
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6),
-              0 0 40px rgba(255, 215, 0, 0.5);
-  color: #ffffff;
-  font-family: 'Segoe UI', 'Consolas', monospace;
-  animation: firegem-fadein 0.4s ease-out;
-  background-image: url('sg-rpt.png');
-  background-size: cover;
-  background-position: center;
-}
-
-#cyborg-modal #modal-body {
-  padding: 20px;
-  max-height: 450px;     /* body adjusted to fit inside modal */
-  overflow-y: auto;
-  box-sizing: border-box;
+@keyframes firegem-fadein {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }

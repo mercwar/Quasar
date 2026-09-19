@@ -140,70 +140,123 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Dynamic Popup Modal Rendering ---
-    function renderCyborgModal(filename, rawContent, error = null) {
-        let modal = document.getElementById("cyborg-modal");
+// --- Dynamic Popup Modal Rendering ---
+function renderCyborgModal(filename, rawContent, error = null) {
+    let modal = document.getElementById("cyborg-modal");
 
-        if (!modal) {
-            modal = document.createElement("div");
-            modal.id = "cyborg-modal";
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span id="modal-title">CYBORG PAYLOAD</span>
-                        <button id="modal-close">&times;</button>
-                    </div>
-                    <div id="modal-body"></div>
+    if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "cyborg-modal";
+        modal.innerHTML = `
+            <div class="modal-content">
+                <div class="modal-header" style="display: flex; align-items: center;">
+                    <button id="modal-title-copy" class="cyborg-copy-btn" style="margin-right: 8px; cursor: pointer; background: transparent; border: none; padding: 0; font-size: inherit;" title="Copy window title path">🗃️</button>
+                    <span id="modal-title">CYBORG PAYLOAD</span>
+                    <button id="modal-close" style="margin-left: auto;">&times;</button>
                 </div>
-            `;
-            document.getElementById("viewport").appendChild(modal);
+                <div id="modal-body"></div>
+            </div>
+        `;
+        document.getElementById("viewport").appendChild(modal);
 
-            document.getElementById("modal-close").addEventListener("click", () => {
-                modal.style.display = "none";
-            });
-        }
+        document.getElementById("modal-close").addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    }
 
-        const modalTitle = document.getElementById("modal-title");
-        const modalBody = document.getElementById("modal-body");
+    const modalTitle = document.getElementById("modal-title");
+    const modalBody = document.getElementById("modal-body");
+    const titleCopyBtn = document.getElementById("modal-title-copy");
 
-        modalTitle.innerText = `${filename}`;
-        modalBody.innerHTML = "";
+    // Assign text content values
+    modalTitle.innerText = `${filename}`;
+    modalBody.innerHTML = "";
 
-        if (error) {
-            modalBody.innerHTML = `<div class="modal-error">[AVIS ERROR]: Failed to load asset stream (${error})</div>`;
+    // Title copy button event tracking logic
+    titleCopyBtn.onclick = (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(filename).then(() => {
+            const originalHtml = titleCopyBtn.innerHTML;
+            titleCopyBtn.innerHTML = "✔️";
+            setTimeout(() => {
+                titleCopyBtn.innerHTML = originalHtml;
+            }, 1200);
+        }).catch(err => {
+            console.error("Failed to copy window path: ", err);
+        });
+    };
+
+    if (error) {
+        modalBody.innerHTML = `<div class="modal-error">[AVIS ERROR]: Failed to load asset stream (${error})</div>`;
+    } else {
+        const entries = rawContent.split(/[\r\n,]+/).map(item => sanitizePath(item)).filter(Boolean);
+
+        if (entries.length === 0) {
+            modalBody.innerHTML = `<div class="modal-empty">No target payload assets listed.</div>`;
         } else {
-            const entries = rawContent.split(/[\r\n,]+/).map(item => sanitizePath(item)).filter(Boolean);
+            const list = document.createElement("ul");
+            list.className = "cyborg-file-list";
+            list.style.listStyle = "none"; // Clears default list bullets if needed
+            list.style.padding = "0";
 
-            if (entries.length === 0) {
-                modalBody.innerHTML = `<div class="modal-empty">No target payload assets listed.</div>`;
-            } else {
-                const list = document.createElement("ul");
-                list.className = "cyborg-file-list";
+            entries.forEach(item => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                const copyBtn = document.createElement("button");
+                
+                const cleanItem = sanitizePath(item);
+                
+                if (cleanItem.toLowerCase().endsWith(".quasar")) {
+                    a.href = `index.html?quasar=${encodeURIComponent(cleanItem)}`;
+                } else {
+                    a.href = '../' + cleanItem + `?t=${Date.now()}`;
+                }
 
-                entries.forEach(item => {
-                    const li = document.createElement("li");
-                    const a = document.createElement("a");
-                    
-                    const cleanItem = sanitizePath(item);
-                    
-                    if (cleanItem.toLowerCase().endsWith(".quasar")) {
-                        a.href = `index.html?quasar=${encodeURIComponent(cleanItem)}`;
-                    } else {
-                        a.href = '../' + cleanItem + `?t=${Date.now()}`;
-                    }
+                a.innerText = cleanItem;
+                a.className = "cyborg-link";
+                a.setAttribute("target", "_self");
 
-                    a.innerText = cleanItem;
-                    a.className = "cyborg-link";
-                    a.setAttribute("target", "_self");
+                // Forces button and text to stay horizontally locked on the same line
+                li.style.display = "flex";
+                li.style.alignItems = "center";
+                li.style.whiteSpace = "nowrap"; 
 
-                    li.appendChild(a);
-                    list.appendChild(li);
+                // Configure copy button with a completely transparent background styling
+                copyBtn.className = "cyborg-copy-btn";
+                copyBtn.innerHTML = "🗃️"; 
+                copyBtn.style.background = "transparent";
+                copyBtn.style.border = "none";
+                copyBtn.style.padding = "0";
+                copyBtn.style.marginRight = "8px";
+                copyBtn.style.cursor = "pointer";
+                copyBtn.style.fontSize = "inherit";
+                copyBtn.style.flexShrink = "0"; // Prevents button from squishing on tiny windows
+                copyBtn.title = "Copy address to clipboard";
+                
+                copyBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    navigator.clipboard.writeText(cleanItem).then(() => {
+                        const originalHtml = copyBtn.innerHTML;
+                        copyBtn.innerHTML = "✔️";
+                        setTimeout(() => {
+                            copyBtn.innerHTML = originalHtml;
+                        }, 1200);
+                    }).catch(err => {
+                        console.error("Failed to copy address: ", err);
+                    });
                 });
 
-                modalBody.appendChild(list);
-            }
-        }
+                // Layout order execution
+                li.appendChild(copyBtn);
+                li.appendChild(a);
+                list.appendChild(li);
+            });
 
-        modal.style.display = "flex";
+            modalBody.appendChild(list);
+        }
     }
+
+    modal.style.display = "flex";
+}
+
 });

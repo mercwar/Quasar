@@ -32,8 +32,8 @@ To help you finish the final thought, could you clarify what the absolute minimu
 
 👉 **This Uplink: [Stargate](https://mercwar.github.io/Quasar/index.html?quasar=AVIS-DL%2Fdl%2F2026%2F09%2F14%2F9-Tutorial.quasar) Quasar**
 
-<a href="https://cron.iblogger.org/Nexus">
-  <img src="qrm.jpg" alt="Enter Nexus for FREE and use QUASAR" style="border: none; max-width: 100%; height: auto;">
+<a href="https://cron.iblogger.org/Nexus" title="Enter Nexus for FREE and use QUASAR">
+  <img src="qrm.jpg" style="border: none; max-width: 100%; height: auto;">
 </a>
 
  GOOD LUCK!
